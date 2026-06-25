@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>HKV Resto — Bar &amp; Restaurant Moderne | Cotonou, Bénin</title>
+    <meta name="description" content="HKV Resto, votre bar &amp; restaurant gastronomique à Cotonou. Cocktails exquis, gastronomie moderne, ambiance unique. Commandez via WhatsApp. Ouvert 7j/7.">
+    <meta property="og:title" content="HKV Resto — Bar &amp; Restaurant Moderne | Cotonou">
+    <meta property="og:description" content="Cocktails exquis &amp; gastronomie moderne à Cotonou, Bénin. Commandez via WhatsApp.">
+    <meta name="theme-color" content="#ff6b00">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ======= HEADER ======= -->
+    <header class="main-header" id="main-header">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="15" stroke="#ff6b00" stroke-width="2"/>
+                    <path d="M8 20 Q16 10 24 20" stroke="#ff6b00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <circle cx="16" cy="13" r="2.5" fill="#ff6b00"/>
+                </svg>
+            </div>
+            <span class="logo-text"><span class="logo-accent">HKV</span> Resto</span>
+        </div>
+        <nav class="main-nav" id="main-nav">
+            <a href="#accueil" class="nav-link active">Accueil</a>
+            <a href="#menu" class="nav-link">La Carte</a>
+            <a href="#galerie" class="nav-link">Galerie</a>
+            <a href="#ambiance" class="nav-link">Ambiance</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!"
+               class="btn btn-whatsapp" target="_blank" id="btn-header-order">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Commander
+            </a>
+            <button class="burger" id="burger-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+
+    <!-- ======= HERO ======= -->
+    <section id="accueil" class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-particles" id="hero-particles"></div>
+            <div class="hero-visual">
+                <!-- Hero image -->
+                <div class="hero-img-wrap">
+                    <img src="images/plat1.jpg" alt="Plat signature HKV Resto" class="hero-food-img">
+                    <div class="hero-img-overlay"></div>
+                </div>
+                <div class="hero-glass-card">
+                    <div class="glass-icon-svg">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2"><path d="M8 2h8l-1 7H9L8 2z"/><path d="M9 9c0 5 6 5 6 0"/><line x1="12" y1="14" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
+                    </div>
+                    <div>
+                        <strong>Plat Signature</strong>
+                        <span>Fait maison</span>
+                    </div>
+                    <div class="glass-price">Dès 3 500 F</div>
+                </div>
+                <div class="hero-glow-orb orb-1"></div>
+                <div class="hero-glow-orb orb-2"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge">
+                <span class="badge-dot"></span>
+                Ouvert — 11h à 2h du matin · Cotonou, Bénin
+            </span>
+            <h1 class="hero-title">
+                Saveurs Authentiques &amp;<br>
+                <em>Gastronomie Moderne</em>
+            </h1>
+            <p class="hero-desc">
+                Bienvenue à HKV Resto — une expérience sensorielle unique où chaque plat est préparé avec passion. Commandez facilement via WhatsApp, au cœur de Cotonou.
+            </p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary" id="btn-hero-carte">
+                    Découvrir la Carte
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20faire%20une%20r%C3%A9servation%20!"
+                   class="btn btn-whatsapp-outline" target="_blank" id="btn-hero-reservation">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    Réserver une table
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <strong>150+</strong>
+                    <span>Plats &amp; Cocktails</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="hero-stat">
+                    <strong>7j/7</strong>
+                    <span>Ouvert</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="hero-stat">
+                    <strong>4.9 / 5</strong>
+                    <span>Note clients</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator"><div class="scroll-dot"></div></div>
+    </section>
+
+    <!-- ======= FEATURES ======= -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background:rgba(255,107,0,.1);color:#ff6b00">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3>Prix Accessibles</h3>
+                    <p>Une gastronomie raffinée sans se ruiner. Des formules pour tous les budgets.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background:rgba(16,185,129,.1);color:#10b981">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h3>Fait avec Passion</h3>
+                    <p>Chaque plat est préparé par nos chefs avec les meilleurs ingrédients frais du marché.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background:rgba(37,211,102,.1);color:#25d366">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    </div>
+                    <h3>Commande WhatsApp</h3>
+                    <p>Passez votre commande directement sur WhatsApp. Simple, rapide et sans friction.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background:rgba(245,158,11,.1);color:#f59e0b">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Service Rapide</h3>
+                    <p>Préparation express en moins de 20 min. Votre temps est précieux pour nous.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= MENU ======= -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Notre Sélection</span>
+                <h2 class="section-title">La Carte HKV</h2>
+                <p class="section-subtitle">Fraîcheur, créativité et saveurs — préparés avec passion</p>
+            </div>
+            <div class="menu-tabs" id="menu-tabs">
+                <button class="menu-tab active" data-tab="entrees">Entrées</button>
+                <button class="menu-tab" data-tab="plats">Plats</button>
+                <button class="menu-tab" data-tab="desserts">Desserts</button>
+                <button class="menu-tab" data-tab="boissons">Cocktails &amp; Boissons</button>
+            </div>
+
+            <!-- ENTREES -->
+            <div class="menu-tab-content active" id="tab-entrees">
+                <div class="menu-grid">
+                    <div class="menu-card card">
+                        <div class="menu-card-visual">
+                            <img src="images/plat6.jpg" alt="Entrée fraîcheur HKV" class="menu-img">
+                            <div class="menu-card-tag">Entrée</div>
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Entrée du Jour</h3>
+                                <span class="menu-card-price">3 500 F</span>
+                            </div>
+                            <p class="menu-card-desc">Sélection du chef selon les arrivages du marché — fraîcheur garantie chaque jour</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20l%27Entr%C3%A9e%20du%20Jour%20(3500F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-card card">
+                        <div class="menu-card-visual">
+                            <img src="images/plat7.jpg" alt="Crevettes flambées HKV" class="menu-img">
+                            <div class="menu-card-tag" style="background:#ff6b00">Chef</div>
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Crevettes Flambées</h3>
+                                <span class="menu-card-price">7 000 F</span>
+                            </div>
+                            <p class="menu-card-desc">Crevettes géantes flambées au cognac, sauce cocktail maison, pain grillé à l'ail</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20des%20Crevettes%20Flamb%C3%A9es%20(7000F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-card card">
+                        <div class="menu-card-visual">
+                            <img src="images/plat8.jpg" alt="Plat du chef HKV" class="menu-img">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Assiette du Chef</h3>
+                                <span class="menu-card-price">5 500 F</span>
+                            </div>
+                            <p class="menu-card-desc">Composition surprise du chef selon les produits frais du jour — saveurs garanties</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20l%27Assiette%20du%20Chef%20(5500F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLATS -->
+            <div class="menu-tab-content" id="tab-plats">
+                <div class="menu-grid">
+                    <div class="menu-card card featured">
+                        <div class="menu-card-visual">
+                            <img src="images/plat1.jpg" alt="Plat signature HKV Resto" class="menu-img">
+                            <div class="menu-card-tag" style="background:#ff6b00">Signature</div>
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Poulet Grillé HKV</h3>
+                                <span class="menu-card-price">9 500 F</span>
+                            </div>
+                            <p class="menu-card-desc">Poulet entier mariné aux épices maison, grillé à la perfection, servi avec frites et sauce spéciale</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20le%20Poulet%20Grillé%20HKV%20(9500F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-card card">
+                        <div class="menu-card-visual">
+                            <img src="images/plat2.jpg" alt="Poisson braisé HKV" class="menu-img">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Poisson Braisé</h3>
+                                <span class="menu-card-price">12 500 F</span>
+                            </div>
+                            <p class="menu-card-desc">Poisson frais braisé au feu de bois, sauce tomate pimentée maison, riz ou frites</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20le%20Poisson%20Brais%C3%A9%20(12500F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-card card">
+                        <div class="menu-card-visual">
+                            <img src="images/plat3.jpg" alt="Viande grillée HKV" class="menu-img">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Brochettes Mixtes</h3>
+                                <span class="menu-card-price">8 000 F</span>
+                            </div>
+                            <p class="menu-card-desc">Brochettes de viande et poulet marinées, légumes grillés, sauce arachide maison</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20des%20Brochettes%20Mixtes%20(8000F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DESSERTS -->
+            <div class="menu-tab-content" id="tab-desserts">
+                <div class="menu-grid">
+                    <div class="menu-card card">
+                        <div class="menu-card-visual">
+                            <img src="images/plat4.jpg" alt="Dessert HKV" class="menu-img">
+                            <div class="menu-card-tag" style="background:#ff6b00">Top vente</div>
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Dessert Maison</h3>
+                                <span class="menu-card-price">3 500 F</span>
+                            </div>
+                            <p class="menu-card-desc">Création sucrée du chef, préparée avec des fruits frais de saison et des saveurs locales</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20un%20Dessert%20Maison%20(3500F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-card card">
+                        <div class="menu-card-visual">
+                            <img src="images/plat5.jpg" alt="Spécialité sucrée HKV" class="menu-img">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Spécialité Sucrée</h3>
+                                <span class="menu-card-price">3 000 F</span>
+                            </div>
+                            <p class="menu-card-desc">Douceur maison aux saveurs tropicales, texture fondante et coulis fruité</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20une%20Sp%C3%A9cialit%C3%A9%20Sucr%C3%A9e%20(3000F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-card card">
+                        <div class="menu-card-visual">
+                            <img src="images/plat9.jpg" alt="Douceur du jour HKV" class="menu-img">
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Douceur du Jour</h3>
+                                <span class="menu-card-price">2 500 F</span>
+                            </div>
+                            <p class="menu-card-desc">Dessert du chef selon inspiration — surprenez vos papilles avec notre création du jour</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20la%20Douceur%20du%20Jour%20(2500F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOISSONS -->
+            <div class="menu-tab-content" id="tab-boissons">
+                <div class="menu-grid">
+                    <div class="menu-card card">
+                        <div class="menu-card-visual" style="background:linear-gradient(135deg,#001a0a,#004020)">
+                            <div class="card-icon-wrap">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"><path d="M8 2h8l-1 7H9L8 2z"/><path d="M9 9c0 5 6 5 6 0"/><line x1="12" y1="14" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
+                            </div>
+                            <div class="menu-card-tag" style="background:#10b981">Best-seller</div>
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Mojito Framboise</h3>
+                                <span class="menu-card-price">5 000 F</span>
+                            </div>
+                            <p class="menu-card-desc">Rhum blanc, framboises fraîches, menthe, citron vert, eau pétillante, sucre de canne</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20un%20Mojito%20Framboise%20(5000F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-card card">
+                        <div class="menu-card-visual" style="background:linear-gradient(135deg,#1a0d00,#4a2200)">
+                            <div class="card-icon-wrap">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"><path d="M8 2h8l-1 7H9L8 2z"/><path d="M9 9c0 5 6 5 6 0"/><line x1="12" y1="14" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
+                            </div>
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Passion Tropical HKV</h3>
+                                <span class="menu-card-price">6 500 F</span>
+                            </div>
+                            <p class="menu-card-desc">Vodka premium, jus de passion, mangue, sirop gingembre, décoration fleur comestible</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20un%20Passion%20Tropical%20HKV%20(6500F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-card card">
+                        <div class="menu-card-visual" style="background:linear-gradient(135deg,#1a001a,#3d0040)">
+                            <div class="card-icon-wrap">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"><path d="M8 2h8l-1 7H9L8 2z"/><path d="M9 9c0 5 6 5 6 0"/><line x1="12" y1="14" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
+                            </div>
+                        </div>
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Sangria Maison</h3>
+                                <span class="menu-card-price">4 000 F</span>
+                            </div>
+                            <p class="menu-card-desc">Vin rouge fruité, cognac, oranges, citrons, pomme, cannelle, sucre roux, eau gazeuse</p>
+                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20une%20Sangria%20Maison%20(4000F%20CFA)%20svp%20!" class="btn btn-order" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                Commander via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= GALERIE ======= -->
+    <section id="galerie" class="galerie-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Nos Créations</span>
+                <h2 class="section-title">Galerie</h2>
+                <p class="section-subtitle">Nos plats en images — de vrais délices préparés avec amour</p>
+            </div>
+            <div class="galerie-grid">
+                <div class="galerie-item large">
+                    <div class="galerie-visual">
+                        <img src="images/plat1.jpg" alt="Poulet grillé HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Poulet Grillé Signature</span><small>Plat phare</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item">
+                    <div class="galerie-visual">
+                        <img src="images/plat2.jpg" alt="Poisson braisé HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Poisson Braisé</span><small>Fraîcheur garantie</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item">
+                    <div class="galerie-visual">
+                        <img src="images/plat3.jpg" alt="Brochettes HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Brochettes Mixtes</span><small>Saveurs grillées</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item">
+                    <div class="galerie-visual">
+                        <img src="images/plat4.jpg" alt="Dessert HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Dessert Maison</span><small>Douceurs du chef</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item large-v">
+                    <div class="galerie-visual">
+                        <img src="images/plat10.jpg" alt="Plat spécial HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Spécialité HKV</span><small>Préparation maison</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item">
+                    <div class="galerie-visual">
+                        <img src="images/plat5.jpg" alt="Plat du moment HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Plat du Moment</span><small>Fait maison</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item">
+                    <div class="galerie-visual">
+                        <img src="images/plat6.jpg" alt="Entrée du jour HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Entrée du Jour</span><small>Légèreté &amp; saveurs</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item">
+                    <div class="galerie-visual">
+                        <img src="images/plat7.jpg" alt="Assiette chef HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Assiette du Chef</span><small>Création exclusive</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= AMBIANCE ======= -->
+    <section id="ambiance" class="ambiance-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">L'Expérience</span>
+                <h2 class="section-title">Notre Ambiance</h2>
+                <p class="section-subtitle">Un cadre unique pensé pour votre plaisir — au cœur de Cotonou</p>
+            </div>
+            <div class="ambiance-grid">
+                <div class="ambiance-scene">
+                    <div class="scene-visual">
+                        <div class="scene-lights">
+                            <div class="light l1"></div>
+                            <div class="light l2"></div>
+                            <div class="light l3"></div>
+                        </div>
+                        <div class="scene-table">
+                            <div class="scene-candle-svg">
+                                <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
+                                    <rect x="8" y="10" width="8" height="28" rx="2" fill="rgba(223,168,67,0.3)" stroke="rgba(223,168,67,0.6)" stroke-width="1"/>
+                                    <ellipse cx="12" cy="8" rx="3" ry="5" fill="#dfa843" opacity="0.9"/>
+                                    <ellipse cx="12" cy="6" rx="2" ry="3" fill="#fff5cc" opacity="0.7"/>
+                                </svg>
+                            </div>
+                            <div class="scene-plates">
+                                <div class="plate"></div>
+                                <div class="plate"></div>
+                            </div>
+                        </div>
+                        <div class="scene-label">Salle Principale — Cotonou</div>
+                    </div>
+                </div>
+                <div class="ambiance-infos">
+                    <div class="ambiance-item">
+                        <div class="ambiance-icon-svg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="1.8"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Soirées Inoubliables</h3>
+                            <p>Musique live le vendredi et samedi soir. DJ set les mercredis. Une programmation soigneusement choisie pour créer l'ambiance parfaite.</p>
+                        </div>
+                    </div>
+                    <div class="ambiance-item">
+                        <div class="ambiance-icon-svg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </div>
+                        <div>
+                            <h3>Espaces Privatisables</h3>
+                            <p>Un espace VIP pouvant accueillir jusqu'à 30 personnes. Idéal pour vos événements d'entreprise, anniversaires et célébrations.</p>
+                        </div>
+                    </div>
+                    <div class="ambiance-item">
+                        <div class="ambiance-icon-svg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h3>Terrasse Éclairée</h3>
+                            <p>Profitez de notre belle terrasse sous les étoiles béninoises. Un cadre romantique et apaisant pour les soirées douces de Cotonou.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20privatiser%20une%20salle%20pour%20un%20%C3%A9v%C3%A9nement%20!"
+                       class="btn btn-primary" style="width:fit-content" target="_blank" id="btn-privatiser">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Privatiser via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= AVIS ======= -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Ils nous font confiance</span>
+                <h2 class="section-title">Avis Clients</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card card">
+                    <div class="stars-svg"><svg width="90" height="16" viewBox="0 0 90 16"><polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#f59e0b"/><polygon points="26,0 28,6 34,6 29,10 31,16 26,12 21,16 23,10 18,6 24,6" fill="#f59e0b"/><polygon points="44,0 46,6 52,6 47,10 49,16 44,12 39,16 41,10 36,6 42,6" fill="#f59e0b"/><polygon points="62,0 64,6 70,6 65,10 67,16 62,12 57,16 59,10 54,6 60,6" fill="#f59e0b"/><polygon points="80,0 82,6 88,6 83,10 85,16 80,12 75,16 77,10 72,6 78,6" fill="#f59e0b"/></svg></div>
+                    <p>"Une expérience gastronomique exceptionnelle à Cotonou. Le poulet grillé était parfait et le service impeccable. Je recommande vivement !"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#ff6b00,#d95b00)">K</div>
+                        <div><strong>Kofi A.</strong><small>Client fidèle depuis 2024</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card card featured-testimonial">
+                    <div class="stars-svg"><svg width="90" height="16" viewBox="0 0 90 16"><polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#f59e0b"/><polygon points="26,0 28,6 34,6 29,10 31,16 26,12 21,16 23,10 18,6 24,6" fill="#f59e0b"/><polygon points="44,0 46,6 52,6 47,10 49,16 44,12 39,16 41,10 36,6 42,6" fill="#f59e0b"/><polygon points="62,0 64,6 70,6 65,10 67,16 62,12 57,16 59,10 54,6 60,6" fill="#f59e0b"/><polygon points="80,0 82,6 88,6 83,10 85,16 80,12 75,16 77,10 72,6 78,6" fill="#f59e0b"/></svg></div>
+                    <p>"Les plats sont délicieux et vraiment bien préparés ! Commander via WhatsApp c'est tellement pratique. Je commande chaque semaine !"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#10b981,#059669)">A</div>
+                        <div><strong>Aminata D.</strong><small>Cliente régulière</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card card">
+                    <div class="stars-svg"><svg width="90" height="16" viewBox="0 0 90 16"><polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#f59e0b"/><polygon points="26,0 28,6 34,6 29,10 31,16 26,12 21,16 23,10 18,6 24,6" fill="#f59e0b"/><polygon points="44,0 46,6 52,6 47,10 49,16 44,12 39,16 41,10 36,6 42,6" fill="#f59e0b"/><polygon points="62,0 64,6 70,6 65,10 67,16 62,12 57,16 59,10 54,6 60,6" fill="#f59e0b"/><polygon points="80,0 82,6 88,6 83,10 85,16 80,12 75,16 77,10 72,6 78,6" fill="#f59e0b"/></svg></div>
+                    <p>"Soirée d'anniversaire parfaite. Équipe très professionnelle, nourriture au top. HKV Resto est notre restaurant préféré au Bénin !"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#6366f1,#4338ca)">S</div>
+                        <div><strong>Serge M.</strong><small>Événement privé</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= WHATSAPP CTA ======= -->
+    <section class="whatsapp-cta-section">
+        <div class="container">
+            <div class="whatsapp-cta-card">
+                <div class="wa-cta-icon">
+                    <svg width="56" height="56" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                </div>
+                <div class="wa-cta-text">
+                    <h2>Commandez en 30 secondes</h2>
+                    <p>Envoyez-nous votre commande ou réservez votre table directement sur WhatsApp. Rapide, simple, sans inscription.</p>
+                </div>
+                <div class="wa-cta-actions">
+                    <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!" class="btn-whatsapp-lg" target="_blank" id="btn-cta-commander">Passer une commande</a>
+                    <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20faire%20une%20r%C3%A9servation%20!" class="btn-whatsapp-outline-lg" target="_blank" id="btn-cta-reserver">Réserver une table</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= CONTACT ======= -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Nous Trouver</span>
+                <h2 class="section-title">Contact &amp; Adresse</h2>
+                <p class="section-subtitle">Nous sommes là pour vous — Cotonou, Bénin</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-infos">
+                    <div class="contact-card card">
+                        <div class="contact-item">
+                            <div class="contact-icon" style="color:#ff6b00"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                            <div><strong>Adresse</strong><p>Cotonou, Bénin</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" style="color:#25d366"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
+                            <div><strong>WhatsApp</strong><a href="https://wa.me/2290167016414" target="_blank" style="color:#25d366">+229 01 67 01 64 14</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" style="color:#f59e0b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                            <div><strong>Horaires d'ouverture</strong><p>Lundi — Dimanche<br><strong>11h00 — 02h00</strong></p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map-placeholder card">
+                    <div class="map-mock">
+                        <div class="map-grid"></div>
+                        <div class="map-pin">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="#ff6b00"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="white"/></svg>
+                            <div class="map-pin-label">HKV Resto — Cotonou, Bénin</div>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/?q=Cotonou+Benin" target="_blank" class="btn btn-outline" style="margin:0 1.5rem 1.5rem;display:flex;justify-content:center;border-radius:8px" id="btn-maps">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Ouvrir dans Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="15" stroke="#ff6b00" stroke-width="2"/>
+                            <path d="M8 20 Q16 10 24 20" stroke="#ff6b00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <circle cx="16" cy="13" r="2.5" fill="#ff6b00"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text"><span class="logo-accent">HKV</span> Resto</span>
+                </div>
+                <p>Bar &amp; Restaurant Gastronomique<br>Cotonou, Bénin — Ouvert 7j/7</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Navigation</h4>
+                <a href="#accueil">Accueil</a>
+                <a href="#menu">La Carte</a>
+                <a href="#galerie">Galerie</a>
+                <a href="#ambiance">Ambiance</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Commander</h4>
+                <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!" target="_blank" class="footer-wa-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    Commander via WhatsApp
+                </a>
+                <p class="footer-hours">Ouvert tous les jours<br>11h00 — 02h00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 HKV Resto — Bar &amp; Restaurant · Cotonou, Bénin. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!"
+       class="floating-wa" target="_blank" id="floating-wa-btn" aria-label="Commander sur WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span class="floating-wa-tooltip">Commander sur WhatsApp</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
