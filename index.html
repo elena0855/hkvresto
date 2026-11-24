@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>HKV Resto — Bar &amp; Restaurant Moderne | Cotonou, Bénin</title>
-    <meta name="description" content="HKV Resto, votre bar &amp; restaurant gastronomique à Cotonou. Cocktails exquis, gastronomie moderne, ambiance unique. Commandez via WhatsApp. Ouvert 7j/7.">
+    <meta name="description" content="HKV Resto, votre bar &amp; restaurant gastronomique à Cotonou. Cocktails exquis, gastronomie moderne, ambiance unique. Commandez via WhatsApp (+229 01 67 01 64 14) et suivez nos vidéos sur TikTok (@hkv_resto).">
     <meta property="og:title" content="HKV Resto — Bar &amp; Restaurant Moderne | Cotonou">
-    <meta property="og:description" content="Cocktails exquis &amp; gastronomie moderne à Cotonou, Bénin. Commandez via WhatsApp.">
+    <meta property="og:description" content="Cocktails exquis &amp; gastronomie moderne à Cotonou, Bénin. Commandez via WhatsApp et suivez-nous sur TikTok.">
     <meta name="theme-color" content="#ff6b00">
     <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
 
@@ -30,17 +32,22 @@
         </div>
         <nav class="main-nav" id="main-nav">
             <a href="#accueil" class="nav-link active">Accueil</a>
-            <a href="#menu" class="nav-link">La Carte</a>
-            <a href="#galerie" class="nav-link">Galerie</a>
+            <a href="#reseaux" class="nav-link">TikTok &amp; WhatsApp</a>
+            <a href="#galerie" class="nav-link">Nos Créations</a>
             <a href="#ambiance" class="nav-link">Ambiance</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
         <div class="header-actions">
-            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!"
-               class="btn btn-whatsapp" target="_blank" id="btn-header-order">
+            <!-- TikTok Header Button -->
+            <button class="btn-tiktok" id="btn-header-tiktok" title="Voir notre compte TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>TikTok</span>
+            </button>
+            <!-- WhatsApp Header Button -->
+            <button class="btn btn-whatsapp" id="btn-header-order" title="Commander sur WhatsApp">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                Commander
-            </a>
+                <span>Commander</span>
+            </button>
             <button class="burger" id="burger-btn" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
@@ -54,18 +61,17 @@
         <div class="hero-bg">
             <div class="hero-particles" id="hero-particles"></div>
             <div class="hero-visual">
-                <!-- Hero image -->
-                <div class="hero-img-wrap">
+                <div class="hero-img-wrap" id="hero-img-trigger" style="cursor: pointer;" title="Cliquez pour voir le plat signature">
                     <img src="images/plat1.jpg" alt="Plat signature HKV Resto" class="hero-food-img">
                     <div class="hero-img-overlay"></div>
                 </div>
-                <div class="hero-glass-card">
+                <div class="hero-glass-card" id="hero-card-trigger" style="cursor: pointer;">
                     <div class="glass-icon-svg">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2"><path d="M8 2h8l-1 7H9L8 2z"/><path d="M9 9c0 5 6 5 6 0"/><line x1="12" y1="14" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
                     </div>
                     <div>
-                        <strong>Plat Signature</strong>
-                        <span>Fait maison</span>
+                        <strong>Poulet Grillé HKV</strong>
+                        <span>Plat Signature • Fait maison</span>
                     </div>
                 </div>
                 <div class="hero-glow-orb orb-1"></div>
@@ -82,18 +88,21 @@
                 <em>Gastronomie Moderne</em>
             </h1>
             <p class="hero-desc">
-                Bienvenue à HKV Resto — une expérience sensorielle unique où chaque plat est préparé avec passion. Commandez facilement via WhatsApp, au cœur de Cotonou.
+                Bienvenue à <strong>HKV Resto</strong> — une expérience sensorielle unique où chaque plat est préparé avec passion. Commandez directement via <strong>WhatsApp (+229 01 67 01 64 14)</strong> et découvrez nos coulisses en vidéo sur <strong>TikTok (@hkv_resto)</strong> !
             </p>
             <div class="hero-actions">
-                <a href="#menu" class="btn btn-primary" id="btn-hero-carte">
-                    Découvrir la Carte
+                <a href="#galerie" class="btn btn-primary" id="btn-hero-creations">
+                    Nos Créations
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
-                <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20faire%20une%20r%C3%A9servation%20!"
-                   class="btn btn-whatsapp-outline" target="_blank" id="btn-hero-reservation">
+                <button class="btn btn-whatsapp-outline" id="btn-hero-whatsapp">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    Réserver une table
-                </a>
+                    Commander sur WhatsApp
+                </button>
+                <button class="btn-tiktok-outline" id="btn-hero-tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                    Vidéos TikTok HKV
+                </button>
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
@@ -103,7 +112,7 @@
                 <div class="stat-divider"></div>
                 <div class="hero-stat">
                     <strong>7j/7</strong>
-                    <span>Ouvert</span>
+                    <span>Ouvert 11h-02h</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="hero-stat">
@@ -124,319 +133,196 @@
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                     </div>
                     <h3>Prix Accessibles</h3>
-                    <p>Une gastronomie raffinée sans se ruiner. Des formules pour tous les budgets.</p>
+                    <p>Une gastronomie raffinée sans se ruiner. Des formules pensées pour tous les budgets.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon" style="background:rgba(16,185,129,.1);color:#10b981">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </div>
                     <h3>Fait avec Passion</h3>
-                    <p>Chaque plat est préparé par nos chefs avec les meilleurs ingrédients frais du marché.</p>
+                    <p>Chaque plat est préparé par nos chefs avec les meilleurs ingrédients frais du marché local.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" id="card-feature-wa" style="cursor:pointer;" title="Cliquez pour tester WhatsApp">
                     <div class="feature-icon" style="background:rgba(37,211,102,.1);color:#25d366">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
                     </div>
-                    <h3>Commande WhatsApp</h3>
-                    <p>Passez votre commande directement sur WhatsApp. Simple, rapide et sans friction.</p>
+                    <h3>WhatsApp Direct</h3>
+                    <p>Commandez au <strong>+229 01 67 01 64 14</strong>. Réponse ultra-rapide et suivi en temps réel.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon" style="background:rgba(245,158,11,.1);color:#f59e0b">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div class="feature-card" id="card-feature-tiktok" style="cursor:pointer;" title="Cliquez pour voir TikTok">
+                    <div class="feature-icon" style="background:rgba(254,44,85,.1);color:#FE2C55">
+                        <i class="fa-brands fa-tiktok text-2xl"></i>
                     </div>
-                    <h3>Service Rapide</h3>
-                    <p>Préparation express en moins de 20 min. Votre temps est précieux pour nous.</p>
+                    <h3>TikTok Officiel</h3>
+                    <p>Suivez <strong>@hkv_resto</strong> pour les recettes secrètes, l'ambiance et les évènements.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ======= MENU ======= -->
-    <section id="menu" class="menu-section">
+    <!-- ======= SECTION DÉDIÉE: TIKTOK & WHATSAPP INTERACTIFS ("et si on clique on verra") ======= -->
+    <section id="reseaux" class="social-hub-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-eyebrow">Notre Sélection</span>
-                <h2 class="section-title">La Carte HKV</h2>
-                <p class="section-subtitle">Fraîcheur, créativité et saveurs — préparés avec passion</p>
-            </div>
-            <div class="menu-tabs" id="menu-tabs">
-                <button class="menu-tab active" data-tab="entrees">Entrées</button>
-                <button class="menu-tab" data-tab="plats">Plats</button>
-                <button class="menu-tab" data-tab="desserts">Desserts</button>
-                <button class="menu-tab" data-tab="boissons">Cocktails &amp; Boissons</button>
+                <span class="section-eyebrow">Connectez-vous avec HKV Resto</span>
+                <h2 class="section-title">Nos Deux Espaces Officiels</h2>
+                <p class="section-subtitle">Cliquez sur chaque espace ci-dessous pour ouvrir l'aperçu interactif, discuter ou scanner le QR Code</p>
             </div>
 
-            <!-- ENTREES -->
-            <div class="menu-tab-content active" id="tab-entrees">
-                <div class="menu-grid">
-                    <div class="menu-card card">
-                        <div class="menu-card-visual">
-                            <img src="images/plat6.jpg" alt="Entrée fraîcheur HKV" class="menu-img">
-                            <div class="menu-card-tag">Entrée</div>
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Entrée du Jour</h3>
+            <div class="social-hub-grid">
+                <!-- TIKTOK CARD -->
+                <div class="social-card card-tiktok" id="hkv-tiktok-card">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+                        <div style="display:flex;align-items:center;gap:1rem;">
+                            <div style="width:54px;height:54px;border-radius:16px;background:#010101;border:2px solid #FE2C55;display:flex;align-items:center;justify-content:center;color:#FE2C55;font-size:1.8rem;box-shadow:0 6px 20px rgba(254,44,85,0.35);">
+                                <i class="fa-brands fa-tiktok"></i>
                             </div>
-                            <p class="menu-card-desc">Sélection du chef selon les arrivages du marché — fraîcheur garantie chaque jour</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20l%27Entr%C3%A9e%20du%20Jour%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
+                            <div>
+                                <h3 style="font-size:1.4rem;font-weight:700;color:#fff;margin:0;">TikTok HKV Resto</h3>
+                                <span style="font-size:0.85rem;color:#FE2C55;font-weight:600;">@hkv_resto</span>
+                            </div>
+                        </div>
+                        <span style="font-size:0.75rem;background:rgba(254,44,85,0.15);color:#ff7590;border:1px solid rgba(254,44,85,0.3);padding:0.3rem 0.75rem;border-radius:9999px;font-weight:600;">
+                            Officiel
+                        </span>
+                    </div>
+
+                    <!-- Visual Mock Video Banner -->
+                    <div style="position:relative;border-radius:14px;overflow:hidden;height:160px;margin-bottom:1.25rem;border:1px solid rgba(255,255,255,0.1);background:#05070c;">
+                        <img src="images/plat1.jpg" alt="Vidéo TikTok HKV" style="width:100%;height:100%;object-fit:cover;opacity:0.65;">
+                        <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.85), transparent);"></div>
+                        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#FE2C55;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 0 20px rgba(254,44,85,0.6);">
+                            <i class="fa-solid fa-play" style="margin-left:3px;"></i>
+                        </div>
+                        <div style="position:absolute;bottom:0.75rem;left:1rem;right:1rem;display:flex;justify-content:space-between;font-size:0.8rem;color:#fff;">
+                            <span>🎬 Ambiance &amp; Grillades en live</span>
+                            <span style="color:#ff6b81;"><i class="fa-solid fa-heart"></i> Voir</span>
                         </div>
                     </div>
-                    <div class="menu-card card">
-                        <div class="menu-card-visual">
-                            <img src="images/plat7.jpg" alt="Crevettes flambées HKV" class="menu-img">
-                            <div class="menu-card-tag" style="background:#ff6b00">Chef</div>
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Crevettes Flambées</h3>
-                            </div>
-                            <p class="menu-card-desc">Crevettes géantes flambées au cognac, sauce cocktail maison, pain grillé à l'ail</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20des%20Crevettes%20Flamb%C3%A9es%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                    <div class="menu-card card">
-                        <div class="menu-card-visual">
-                            <img src="images/plat8.jpg" alt="Plat du chef HKV" class="menu-img">
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Assiette du Chef</h3>
-                            </div>
-                            <p class="menu-card-desc">Composition surprise du chef selon les produits frais du jour — saveurs garanties</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20l%27Assiette%20du%20Chef%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
-                        </div>
+
+                    <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;margin-bottom:1.5rem;">
+                        Retrouvez toutes les vidéos virales, les coulisses de la préparation de nos plats, les soirées en direct et nos offres spéciales exclusives.
+                    </p>
+
+                    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                        <button class="btn-tiktok" style="flex:1;justify-content:center;padding:0.85rem;" id="btn-open-tiktok-modal">
+                            <i class="fa-brands fa-tiktok"></i>
+                            <span>Voir le Profil TikTok</span>
+                        </button>
+                        <a href="https://www.tiktok.com/@hkv_resto?_r=1&_t=ZG-9BfbMIiXGlD" target="_blank" class="btn btn-outline" style="padding:0.85rem 1.25rem;border-radius:9999px;font-size:0.85rem;" title="Lien direct TikTok">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
 
-            <!-- PLATS -->
-            <div class="menu-tab-content" id="tab-plats">
-                <div class="menu-grid">
-                    <div class="menu-card card featured">
-                        <div class="menu-card-visual">
-                            <img src="images/plat1.jpg" alt="Plat signature HKV Resto" class="menu-img">
-                            <div class="menu-card-tag" style="background:#ff6b00">Signature</div>
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Poulet Grillé HKV</h3>
+                <!-- WHATSAPP CARD -->
+                <div class="social-card card-wa" id="hkv-wa-card">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+                        <div style="display:flex;align-items:center;gap:1rem;">
+                            <div style="width:54px;height:54px;border-radius:16px;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.8rem;box-shadow:0 6px 20px rgba(37,211,102,0.4);">
+                                <i class="fa-brands fa-whatsapp"></i>
                             </div>
-                            <p class="menu-card-desc">Poulet entier mariné aux épices maison, grillé à la perfection, servi avec frites et sauce spéciale</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20le%20Poulet%20Grill%C3%A9%20HKV%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                    <div class="menu-card card">
-                        <div class="menu-card-visual">
-                            <img src="images/plat2.jpg" alt="Poisson braisé HKV" class="menu-img">
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Poisson Braisé</h3>
+                            <div>
+                                <h3 style="font-size:1.4rem;font-weight:700;color:#fff;margin:0;">WhatsApp HKV Resto</h3>
+                                <span style="font-size:0.85rem;color:#25D366;font-weight:600;">+229 01 67 01 64 14</span>
                             </div>
-                            <p class="menu-card-desc">Poisson frais braisé au feu de bois, sauce tomate pimentée maison, riz ou frites</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20le%20Poisson%20Brais%C3%A9%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
                         </div>
+                        <span style="font-size:0.75rem;background:rgba(37,211,102,0.15);color:#4ade80;border:1px solid rgba(37,211,102,0.3);padding:0.3rem 0.75rem;border-radius:9999px;font-weight:600;">
+                            7j/7 En Ligne
+                        </span>
                     </div>
-                    <div class="menu-card card">
-                        <div class="menu-card-visual">
-                            <img src="images/plat3.jpg" alt="Viande grillée HKV" class="menu-img">
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Brochettes Mixtes</h3>
-                            </div>
-                            <p class="menu-card-desc">Brochettes de viande et poulet marinées, légumes grillés, sauce arachide maison</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20des%20Brochettes%20Mixtes%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- DESSERTS -->
-            <div class="menu-tab-content" id="tab-desserts">
-                <div class="menu-grid">
-                    <div class="menu-card card">
-                        <div class="menu-card-visual">
-                            <img src="images/plat4.jpg" alt="Dessert HKV" class="menu-img">
-                            <div class="menu-card-tag" style="background:#ff6b00">Top vente</div>
+                    <!-- WhatsApp Quick Message Teaser Box -->
+                    <div style="background:#090d16;border:1px solid rgba(37,211,102,0.25);border-radius:14px;padding:1rem;margin-bottom:1.25rem;">
+                        <div style="font-size:0.75rem;color:#94a3b8;margin-bottom:0.4rem;display:flex;align-items:center;gap:0.4rem;">
+                            <span style="width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
+                            HKV Resto Service Clientèle :
                         </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Dessert Maison</h3>
-                            </div>
-                            <p class="menu-card-desc">Création sucrée du chef, préparée avec des fruits frais de saison et des saveurs locales</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20un%20Dessert%20Maison%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
-                        </div>
+                        <p style="font-size:0.85rem;color:#f1f5f9;margin:0;font-style:italic;">
+                            "Bonjour ! Envoyez-nous votre commande ou réservez votre table en direct. Livraison rapide partout à Cotonou !"
+                        </p>
                     </div>
-                    <div class="menu-card card">
-                        <div class="menu-card-visual">
-                            <img src="images/plat5.jpg" alt="Spécialité sucrée HKV" class="menu-img">
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Spécialité Sucrée</h3>
-                            </div>
-                            <p class="menu-card-desc">Douceur maison aux saveurs tropicales, texture fondante et coulis fruité</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20une%20Sp%C3%A9cialit%C3%A9%20Sucr%C3%A9e%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                    <div class="menu-card card">
-                        <div class="menu-card-visual">
-                            <img src="images/plat9.jpg" alt="Douceur du jour HKV" class="menu-img">
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Douceur du Jour</h3>
-                            </div>
-                            <p class="menu-card-desc">Dessert du chef selon inspiration — surprenez vos papilles avec notre création du jour</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20la%20Douceur%20du%20Jour%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- BOISSONS -->
-            <div class="menu-tab-content" id="tab-boissons">
-                <div class="menu-grid">
-                    <div class="menu-card card">
-                        <div class="menu-card-visual" style="background:linear-gradient(135deg,#001a0a,#004020)">
-                            <div class="card-icon-wrap">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"><path d="M8 2h8l-1 7H9L8 2z"/><path d="M9 9c0 5 6 5 6 0"/><line x1="12" y1="14" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
-                            </div>
-                            <div class="menu-card-tag" style="background:#10b981">Best-seller</div>
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Mojito Framboise</h3>
-                            </div>
-                            <p class="menu-card-desc">Rhum blanc, framboises fraîches, menthe, citron vert, eau pétillante, sucre de canne</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20un%20Mojito%20Framboise%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                    <div class="menu-card card">
-                        <div class="menu-card-visual" style="background:linear-gradient(135deg,#1a0d00,#4a2200)">
-                            <div class="card-icon-wrap">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"><path d="M8 2h8l-1 7H9L8 2z"/><path d="M9 9c0 5 6 5 6 0"/><line x1="12" y1="14" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
-                            </div>
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Passion Tropical HKV</h3>
-                            </div>
-                            <p class="menu-card-desc">Vodka premium, jus de passion, mangue, sirop gingembre, décoration fleur comestible</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20un%20Passion%20Tropical%20HKV%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                    <div class="menu-card card">
-                        <div class="menu-card-visual" style="background:linear-gradient(135deg,#1a001a,#3d0040)">
-                            <div class="card-icon-wrap">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"><path d="M8 2h8l-1 7H9L8 2z"/><path d="M9 9c0 5 6 5 6 0"/><line x1="12" y1="14" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
-                            </div>
-                        </div>
-                        <div class="menu-card-body">
-                            <div class="menu-card-header">
-                                <h3 class="menu-card-title">Sangria Maison</h3>
-                            </div>
-                            <p class="menu-card-desc">Vin rouge fruité, cognac, oranges, citrons, pomme, cannelle, sucre roux, eau gazeuse</p>
-                            <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20commander%20une%20Sangria%20Maison%20svp%20!" class="btn btn-order" target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                                Commander via WhatsApp
-                            </a>
-                        </div>
+                    <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;margin-bottom:1.5rem;">
+                        Passez votre commande en un éclair, personnalisez votre repas ou réservez une table VIP avec nos équipes disponibles 7 jours sur 7.
+                    </p>
+
+                    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                        <button class="btn btn-whatsapp" style="flex:1;justify-content:center;padding:0.85rem;border-radius:9999px;" id="btn-open-wa-modal">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Discuter &amp; Commander</span>
+                        </button>
+                        <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!" target="_blank" class="btn btn-outline" style="padding:0.85rem 1.25rem;border-radius:9999px;font-size:0.85rem;" title="Lien direct WhatsApp">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ======= GALERIE ======= -->
+    <!-- ======= GALERIE (NOS CRÉATIONS) ======= -->
     <section id="galerie" class="galerie-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-eyebrow">Nos Créations</span>
                 <h2 class="section-title">Galerie</h2>
-                <p class="section-subtitle">Nos plats en images — de vrais délices préparés avec amour</p>
+                <p class="section-subtitle">Nos plats en images — Cliquez sur une image pour l'agrandir et commander</p>
             </div>
             <div class="galerie-grid">
-                <div class="galerie-item large">
+                <div class="galerie-item" data-title="Poulet Grillé Signature" data-img="images/plat1.jpg" data-desc="Poulet grillé au feu de bois avec marinades aux herbes fraîches et épices authentiques de Cotonou.">
                     <div class="galerie-visual">
                         <img src="images/plat1.jpg" alt="Poulet grillé HKV" class="galerie-img">
-                        <div class="galerie-overlay"><span>Poulet Grillé Signature</span><small>Plat phare</small></div>
+                        <div class="galerie-preview-badge" title="Aperçu rapide"><i class="fa-regular fa-eye"></i></div>
+                        <div class="galerie-overlay"><span>Poulet Grillé Signature</span><small>Plat phare • Cliquer pour commander</small></div>
                     </div>
                 </div>
-                <div class="galerie-item">
+                <div class="galerie-item" data-title="Poisson Braisé" data-img="images/plat2.jpg" data-desc="Poisson frais rôti avec sauce épicée maison et tranches de bananes plantains frites.">
                     <div class="galerie-visual">
                         <img src="images/plat2.jpg" alt="Poisson braisé HKV" class="galerie-img">
+                        <div class="galerie-preview-badge" title="Aperçu rapide"><i class="fa-regular fa-eye"></i></div>
                         <div class="galerie-overlay"><span>Poisson Braisé</span><small>Fraîcheur garantie</small></div>
                     </div>
                 </div>
-                <div class="galerie-item">
+                <div class="galerie-item" data-title="Brochettes Mixtes" data-img="images/plat3.jpg" data-desc="Brochettes grillées minutes, tendres et parfumées aux aromates.">
                     <div class="galerie-visual">
                         <img src="images/plat3.jpg" alt="Brochettes HKV" class="galerie-img">
+                        <div class="galerie-preview-badge" title="Aperçu rapide"><i class="fa-regular fa-eye"></i></div>
                         <div class="galerie-overlay"><span>Brochettes Mixtes</span><small>Saveurs grillées</small></div>
                     </div>
                 </div>
-                <div class="galerie-item">
+                <div class="galerie-item" data-title="Dessert Maison" data-img="images/plat4.jpg" data-desc="Délicatesse sucrée pour conclure votre repas en beauté.">
                     <div class="galerie-visual">
                         <img src="images/plat4.jpg" alt="Dessert HKV" class="galerie-img">
+                        <div class="galerie-preview-badge" title="Aperçu rapide"><i class="fa-regular fa-eye"></i></div>
                         <div class="galerie-overlay"><span>Dessert Maison</span><small>Douceurs du chef</small></div>
                     </div>
                 </div>
-                <div class="galerie-item large-v">
+                <div class="galerie-item" data-title="Spécialité Cocktail &amp; Bar HKV" data-img="images/plat10.jpg" data-desc="Nos cocktails signature et créations exclusives de notre barman.">
                     <div class="galerie-visual">
                         <img src="images/plat10.jpg" alt="Plat spécial HKV" class="galerie-img">
-                        <div class="galerie-overlay"><span>Spécialité HKV</span><small>Préparation maison</small></div>
+                        <div class="galerie-preview-badge" title="Aperçu rapide"><i class="fa-regular fa-eye"></i></div>
+                        <div class="galerie-overlay"><span>Spécialité Bar HKV</span><small>Cocktail Signature</small></div>
                     </div>
                 </div>
-                <div class="galerie-item">
+                <div class="galerie-item" data-title="Plat du Moment" data-img="images/plat5.jpg" data-desc="Une nouveauté chaque semaine imaginée par notre brigade de cuisine.">
                     <div class="galerie-visual">
                         <img src="images/plat5.jpg" alt="Plat du moment HKV" class="galerie-img">
+                        <div class="galerie-preview-badge" title="Aperçu rapide"><i class="fa-regular fa-eye"></i></div>
                         <div class="galerie-overlay"><span>Plat du Moment</span><small>Fait maison</small></div>
                     </div>
                 </div>
-                <div class="galerie-item">
+                <div class="galerie-item" data-title="Entrée du Jour" data-img="images/plat6.jpg" data-desc="Légèreté et fraîcheur pour commencer votre repas.">
                     <div class="galerie-visual">
                         <img src="images/plat6.jpg" alt="Entrée du jour HKV" class="galerie-img">
+                        <div class="galerie-preview-badge" title="Aperçu rapide"><i class="fa-regular fa-eye"></i></div>
                         <div class="galerie-overlay"><span>Entrée du Jour</span><small>Légèreté &amp; saveurs</small></div>
                     </div>
                 </div>
-                <div class="galerie-item">
+                <div class="galerie-item" data-title="Assiette du Chef" data-img="images/plat7.jpg" data-desc="Création exclusive mélangeant viandes et fruits de mer cuisinés avec passion.">
                     <div class="galerie-visual">
                         <img src="images/plat7.jpg" alt="Assiette chef HKV" class="galerie-img">
+                        <div class="galerie-preview-badge" title="Aperçu rapide"><i class="fa-regular fa-eye"></i></div>
                         <div class="galerie-overlay"><span>Assiette du Chef</span><small>Création exclusive</small></div>
                     </div>
                 </div>
@@ -473,7 +359,7 @@
                                 <div class="plate"></div>
                             </div>
                         </div>
-                        <div class="scene-label">Salle Principale — Cotonou</div>
+                        <div class="scene-label">Salle Principale &amp; Terrasse — Cotonou</div>
                     </div>
                 </div>
                 <div class="ambiance-infos">
@@ -483,7 +369,7 @@
                         </div>
                         <div>
                             <h3>Soirées Inoubliables</h3>
-                            <p>Musique live le vendredi et samedi soir. DJ set les mercredis. Une programmation soigneusement choisie pour créer l'ambiance parfaite.</p>
+                            <p>Musique lounge, ambiance festive et cocktails rafraîchissants. Une programmation soigneusement pensée pour vos sorties entre amis ou en famille.</p>
                         </div>
                     </div>
                     <div class="ambiance-item">
@@ -492,7 +378,7 @@
                         </div>
                         <div>
                             <h3>Espaces Privatisables</h3>
-                            <p>Un espace VIP pouvant accueillir jusqu'à 30 personnes. Idéal pour vos événements d'entreprise, anniversaires et célébrations.</p>
+                            <p>Un espace VIP pouvant accueillir vos célébrations d'anniversaire, repas d'entreprise ou soirées privées avec service traiteur sur mesure.</p>
                         </div>
                     </div>
                     <div class="ambiance-item">
@@ -501,14 +387,13 @@
                         </div>
                         <div>
                             <h3>Terrasse Éclairée</h3>
-                            <p>Profitez de notre belle terrasse sous les étoiles béninoises. Un cadre romantique et apaisant pour les soirées douces de Cotonou.</p>
+                            <p>Profitez de notre terrasse sous la brise de Cotonou. Un cadre chaleureux pour déguster vos grillades en toute décontraction.</p>
                         </div>
                     </div>
-                    <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20privatiser%20une%20salle%20pour%20un%20%C3%A9v%C3%A9nement%20!"
-                       class="btn btn-primary" style="width:fit-content" target="_blank" id="btn-privatiser">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    <button class="btn btn-primary" style="width:fit-content" id="btn-privatiser-open">
+                        <i class="fa-brands fa-whatsapp"></i>
                         Privatiser via WhatsApp
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -524,23 +409,23 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card card">
                     <div class="stars-svg"><svg width="90" height="16" viewBox="0 0 90 16"><polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#f59e0b"/><polygon points="26,0 28,6 34,6 29,10 31,16 26,12 21,16 23,10 18,6 24,6" fill="#f59e0b"/><polygon points="44,0 46,6 52,6 47,10 49,16 44,12 39,16 41,10 36,6 42,6" fill="#f59e0b"/><polygon points="62,0 64,6 70,6 65,10 67,16 62,12 57,16 59,10 54,6 60,6" fill="#f59e0b"/><polygon points="80,0 82,6 88,6 83,10 85,16 80,12 75,16 77,10 72,6 78,6" fill="#f59e0b"/></svg></div>
-                    <p>"Une expérience gastronomique exceptionnelle à Cotonou. Le poulet grillé était parfait et le service impeccable. Je recommande vivement !"</p>
+                    <p>"Une expérience gastronomique exceptionnelle à Cotonou. Le poulet grillé est parfaitement assaisonné et le service ultra rapide sur WhatsApp !"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar" style="background:linear-gradient(135deg,#ff6b00,#d95b00)">K</div>
-                        <div><strong>Kofi A.</strong><small>Client fidèle depuis 2024</small></div>
+                        <div><strong>Kofi A.</strong><small>Client fidèle</small></div>
                     </div>
                 </div>
                 <div class="testimonial-card card featured-testimonial">
                     <div class="stars-svg"><svg width="90" height="16" viewBox="0 0 90 16"><polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#f59e0b"/><polygon points="26,0 28,6 34,6 29,10 31,16 26,12 21,16 23,10 18,6 24,6" fill="#f59e0b"/><polygon points="44,0 46,6 52,6 47,10 49,16 44,12 39,16 41,10 36,6 42,6" fill="#f59e0b"/><polygon points="62,0 64,6 70,6 65,10 67,16 62,12 57,16 59,10 54,6 60,6" fill="#f59e0b"/><polygon points="80,0 82,6 88,6 83,10 85,16 80,12 75,16 77,10 72,6 78,6" fill="#f59e0b"/></svg></div>
-                    <p>"Les plats sont délicieux et vraiment bien préparés ! Commander via WhatsApp c'est tellement pratique. Je commande chaque semaine !"</p>
+                    <p>"J'ai découvert HKV Resto sur TikTok et la réalité est encore meilleure que les vidéos ! On commande en 30 secondes via WhatsApp et c'est livré chaud."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar" style="background:linear-gradient(135deg,#10b981,#059669)">A</div>
-                        <div><strong>Aminata D.</strong><small>Cliente régulière</small></div>
+                        <div><strong>Aminata D.</strong><small>Abonnée TikTok &amp; Cliente</small></div>
                     </div>
                 </div>
                 <div class="testimonial-card card">
                     <div class="stars-svg"><svg width="90" height="16" viewBox="0 0 90 16"><polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#f59e0b"/><polygon points="26,0 28,6 34,6 29,10 31,16 26,12 21,16 23,10 18,6 24,6" fill="#f59e0b"/><polygon points="44,0 46,6 52,6 47,10 49,16 44,12 39,16 41,10 36,6 42,6" fill="#f59e0b"/><polygon points="62,0 64,6 70,6 65,10 67,16 62,12 57,16 59,10 54,6 60,6" fill="#f59e0b"/><polygon points="80,0 82,6 88,6 83,10 85,16 80,12 75,16 77,10 72,6 78,6" fill="#f59e0b"/></svg></div>
-                    <p>"Soirée d'anniversaire parfaite. Équipe très professionnelle, nourriture au top. HKV Resto est notre restaurant préféré au Bénin !"</p>
+                    <p>"L'ambiance est au top, les cocktails sont délicieux et le personnel très attentionné. Notre restaurant numéro un à Cotonou !"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar" style="background:linear-gradient(135deg,#6366f1,#4338ca)">S</div>
                         <div><strong>Serge M.</strong><small>Événement privé</small></div>
@@ -550,7 +435,7 @@
         </div>
     </section>
 
-    <!-- ======= WHATSAPP CTA ======= -->
+    <!-- ======= WHATSAPP & TIKTOK DUAL CTA ======= -->
     <section class="whatsapp-cta-section">
         <div class="container">
             <div class="whatsapp-cta-card">
@@ -558,12 +443,18 @@
                     <svg width="56" height="56" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                 </div>
                 <div class="wa-cta-text">
-                    <h2>Commandez en 30 secondes</h2>
-                    <p>Envoyez-nous votre commande ou réservez votre table directement sur WhatsApp. Rapide, simple, sans inscription.</p>
+                    <h2>Commandez ou Suivez-nous</h2>
+                    <p>Contactez notre service sur WhatsApp au <strong>+229 01 67 01 64 14</strong> ou découvrez nos vidéos sur TikTok <strong>@hkv_resto</strong>. Simple, direct et chaleureux.</p>
                 </div>
                 <div class="wa-cta-actions">
-                    <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!" class="btn-whatsapp-lg" target="_blank" id="btn-cta-commander">Passer une commande</a>
-                    <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20faire%20une%20r%C3%A9servation%20!" class="btn-whatsapp-outline-lg" target="_blank" id="btn-cta-reserver">Réserver une table</a>
+                    <button class="btn-whatsapp-lg" id="btn-cta-commander">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Commander sur WhatsApp
+                    </button>
+                    <button class="btn-tiktok" style="padding:1rem 1.8rem;font-size:1rem;" id="btn-cta-tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                        Découvrir sur TikTok
+                    </button>
                 </div>
             </div>
         </div>
@@ -577,35 +468,32 @@
                 <h2 class="section-title">Contact &amp; Adresse</h2>
                 <p class="section-subtitle">Nous sommes là pour vous — Cotonou, Bénin</p>
             </div>
-            <div class="contact-grid">
-                <div class="contact-infos">
-                    <div class="contact-card card">
+            <div class="contact-grid" style="display:flex; justify-content:center;">
+                <div class="contact-infos" style="max-width: 650px; width: 100%;">
+                    <div class="contact-card card" style="padding: 2.5rem 2rem;">
                         <div class="contact-item">
                             <div class="contact-icon" style="color:#ff6b00"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
                             <div><strong>Adresse</strong><p>Cotonou, Bénin</p></div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon" style="color:#25d366"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
-                            <div><strong>WhatsApp</strong><a href="https://wa.me/2290167016414" target="_blank" style="color:#25d366">+229 01 67 01 64 14</a></div>
+                        <div class="contact-item" style="cursor:pointer;" id="contact-wa-item">
+                            <div class="contact-icon" style="color:#25d366"><i class="fa-brands fa-whatsapp text-2xl"></i></div>
+                            <div>
+                                <strong>WhatsApp Officiel</strong>
+                                <p style="color:#25d366;font-weight:600;font-size:1.05rem;">+229 01 67 01 64 14</p>
+                            </div>
+                        </div>
+                        <div class="contact-item" style="cursor:pointer;" id="contact-tiktok-item">
+                            <div class="contact-icon" style="color:#FE2C55"><i class="fa-brands fa-tiktok text-2xl"></i></div>
+                            <div>
+                                <strong>TikTok Officiel</strong>
+                                <p style="color:#FE2C55;font-weight:600;font-size:1.05rem;">@hkv_resto</p>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon" style="color:#f59e0b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
                             <div><strong>Horaires d'ouverture</strong><p>Lundi — Dimanche<br><strong>11h00 — 02h00</strong></p></div>
                         </div>
                     </div>
-                </div>
-                <div class="contact-map-placeholder card">
-                    <div class="map-mock">
-                        <div class="map-grid"></div>
-                        <div class="map-pin">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="#ff6b00"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="white"/></svg>
-                            <div class="map-pin-label">HKV Resto — Cotonou, Bénin</div>
-                        </div>
-                    </div>
-                    <a href="https://maps.google.com/?q=Cotonou+Benin" target="_blank" class="btn btn-outline" style="margin:0 1.5rem 1.5rem;display:flex;justify-content:center;border-radius:8px" id="btn-maps">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        Ouvrir dans Google Maps
-                    </a>
                 </div>
             </div>
         </div>
@@ -626,21 +514,25 @@
                     <span class="logo-text"><span class="logo-accent">HKV</span> Resto</span>
                 </div>
                 <p>Bar &amp; Restaurant Gastronomique<br>Cotonou, Bénin — Ouvert 7j/7</p>
+                <div style="display:flex;gap:0.75rem;margin-top:1rem;">
+                    <a href="https://wa.me/2290167016414" target="_blank" style="color:#25d366;font-size:1.4rem;" title="WhatsApp HKV Resto"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@hkv_resto?_r=1&_t=ZG-9BfbMIiXGlD" target="_blank" style="color:#FE2C55;font-size:1.4rem;" title="TikTok HKV Resto"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
             </div>
             <div class="footer-nav">
                 <h4>Navigation</h4>
                 <a href="#accueil">Accueil</a>
-                <a href="#menu">La Carte</a>
-                <a href="#galerie">Galerie</a>
+                <a href="#reseaux">TikTok &amp; WhatsApp</a>
+                <a href="#galerie">Nos Créations</a>
                 <a href="#ambiance">Ambiance</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="footer-contact">
-                <h4>Commander</h4>
-                <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!" target="_blank" class="footer-wa-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    Commander via WhatsApp
-                </a>
+                <h4>Nos Coordonnées</h4>
+                <p style="color:#94a3b8;font-size:0.9rem;margin-bottom:0.75rem;">
+                    WhatsApp : <strong>+229 01 67 01 64 14</strong><br>
+                    TikTok : <strong>@hkv_resto</strong>
+                </p>
                 <p class="footer-hours">Ouvert tous les jours<br>11h00 — 02h00</p>
             </div>
         </div>
@@ -649,12 +541,151 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!"
-       class="floating-wa" target="_blank" id="floating-wa-btn" aria-label="Commander sur WhatsApp">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        <span class="floating-wa-tooltip">Commander sur WhatsApp</span>
-    </a>
+    <!-- ======= DUAL FLOATING BUTTONS (WhatsApp & TikTok) ======= -->
+    <div class="floating-social-stack">
+        <!-- Floating TikTok -->
+        <a href="https://www.tiktok.com/@hkv_resto?_r=1&_t=ZG-9BfbMIiXGlD" target="_blank" class="floating-btn tiktok" id="floating-tiktok-btn" aria-label="Voir nos vidéos TikTok">
+            <i class="fa-brands fa-tiktok" style="font-size:1.6rem;"></i>
+            <span class="floating-tooltip">Suivre sur TikTok @hkv_resto</span>
+        </a>
+        <!-- Floating WhatsApp -->
+        <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!" target="_blank" class="floating-btn wa" id="floating-wa-btn" aria-label="Commander sur WhatsApp">
+            <i class="fa-brands fa-whatsapp" style="font-size:2rem;"></i>
+            <span class="floating-tooltip">Commander au +229 01 67 01 64 14</span>
+        </a>
+    </div>
+
+    <!-- ========================================================
+         MODALS INTERACTIFS ("et si on clique on verra")
+         ======================================================== -->
+
+    <!-- 1. MODAL WHATSAPP INTERACTIF -->
+    <div class="hkv-modal" id="modal-whatsapp">
+        <div class="hkv-modal-box">
+            <button class="hkv-modal-close" data-close="modal-whatsapp">&times;</button>
+            <div style="background:linear-gradient(135deg, #128c7e, #075e54);padding:2rem 1.5rem;color:#fff;border-radius:24px 24px 0 0;">
+                <div style="display:flex;align-items:center;gap:1rem;">
+                    <div style="width:52px;height:52px;border-radius:50%;background:#fff;color:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.8rem;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h3 style="margin:0;font-size:1.4rem;font-weight:700;">WhatsApp HKV Resto</h3>
+                        <p style="margin:0.2rem 0 0;font-size:0.85rem;color:#dcf8c6;">+229 01 67 01 64 14 • En ligne 7j/7</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding:1.5rem;">
+                <p style="font-size:0.85rem;color:#94a3b8;margin-bottom:0.75rem;">Choisissez un message rapide ou écrivez le vôtre :</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem;">
+                    <button class="wa-preset-btn" style="background:#1e2538;border:1px solid rgba(255,255,255,0.1);color:#e2e8f0;padding:0.4rem 0.8rem;border-radius:8px;font-size:0.75rem;cursor:pointer;" data-text="Bonjour HKV Resto, je voudrais passer une commande pour livraison !">🍗 Passer une commande</button>
+                    <button class="wa-preset-btn" style="background:#1e2538;border:1px solid rgba(255,255,255,0.1);color:#e2e8f0;padding:0.4rem 0.8rem;border-radius:8px;font-size:0.75rem;cursor:pointer;" data-text="Bonjour HKV Resto, je voudrais réserver une table pour ce soir !">🍽️ Réserver une table</button>
+                    <button class="wa-preset-btn" style="background:#1e2538;border:1px solid rgba(255,255,255,0.1);color:#e2e8f0;padding:0.4rem 0.8rem;border-radius:8px;font-size:0.75rem;cursor:pointer;" data-text="Bonjour HKV Resto, pouvez-vous m'envoyer le menu complet et les tarifs ?">📋 Demander les tarifs</button>
+                </div>
+
+                <textarea id="wa-modal-textarea" rows="3" style="width:100%;box-sizing:border-box;background:#090d16;border:1px solid rgba(37,211,102,0.4);border-radius:12px;padding:0.85rem;color:#fff;font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;" placeholder="Tapez votre message ici...">Bonjour HKV Resto, je voudrais passer une commande !</textarea>
+
+                <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:0.75rem;">
+                    <a id="wa-modal-send-btn" href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!" target="_blank" class="btn btn-whatsapp" style="justify-content:center;padding:1rem;font-size:1rem;border-radius:12px;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Envoyer le message sur WhatsApp
+                    </a>
+                    
+                    <button id="wa-modal-qr-toggle" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#cbd5e1;padding:0.6rem;border-radius:10px;font-size:0.8rem;cursor:pointer;">
+                        <i class="fa-solid fa-qrcode"></i> Afficher le QR Code pour scanner
+                    </button>
+
+                    <div id="wa-qr-container" style="display:none;text-align:center;background:#05070c;padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08);margin-top:0.5rem;">
+                        <div id="wa-qrcode-canvas" style="background:#fff;padding:10px;border-radius:8px;display:inline-block;"></div>
+                        <p style="font-size:0.75rem;color:#94a3b8;margin:0.5rem 0 0;">Scannez avec votre téléphone pour ouvrir WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MODAL TIKTOK INTERACTIF -->
+    <div class="hkv-modal" id="modal-tiktok">
+        <div class="hkv-modal-box">
+            <button class="hkv-modal-close" data-close="modal-tiktok">&times;</button>
+            <div style="background:linear-gradient(135deg, #010101, #1e0915);padding:2rem 1.5rem;color:#fff;border-radius:24px 24px 0 0;border-bottom:2px solid #FE2C55;">
+                <div style="display:flex;align-items:center;gap:1rem;">
+                    <div style="width:54px;height:54px;border-radius:50%;background:#000;border:2px solid #FE2C55;color:#FE2C55;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 0 15px rgba(254,44,85,0.4);">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <div>
+                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                            <h3 style="margin:0;font-size:1.4rem;font-weight:700;">HKV Resto</h3>
+                            <i class="fa-solid fa-circle-check" style="color:#25F4EE;font-size:0.9rem;"></i>
+                        </div>
+                        <p style="margin:0.2rem 0 0;font-size:0.85rem;color:#FE2C55;font-weight:600;">@hkv_resto</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding:1.5rem;">
+                <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.5;margin-bottom:1.25rem;">
+                    Suivez nos créations en direct, nos grillades savoureuses, nos recettes de cocktails et toute l'ambiance nocturne de Cotonou !
+                </p>
+
+                <!-- Mockup Video Reels Teaser -->
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.25rem;">
+                    <div style="position:relative;border-radius:12px;overflow:hidden;height:120px;background:#05070c;border:1px solid rgba(255,255,255,0.1);">
+                        <img src="images/plat1.jpg" alt="Video 1" style="width:100%;height:100%;object-fit:cover;opacity:0.7;">
+                        <span style="position:absolute;bottom:6px;left:6px;font-size:0.7rem;color:#fff;background:rgba(0,0,0,0.6);padding:2px 6px;border-radius:4px;"><i class="fa-solid fa-play"></i> 15.2K</span>
+                    </div>
+                    <div style="position:relative;border-radius:12px;overflow:hidden;height:120px;background:#05070c;border:1px solid rgba(255,255,255,0.1);">
+                        <img src="images/plat7.jpg" alt="Video 2" style="width:100%;height:100%;object-fit:cover;opacity:0.7;">
+                        <span style="position:absolute;bottom:6px;left:6px;font-size:0.7rem;color:#fff;background:rgba(0,0,0,0.6);padding:2px 6px;border-radius:4px;"><i class="fa-solid fa-play"></i> 28.4K</span>
+                    </div>
+                </div>
+
+                <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                    <a href="https://www.tiktok.com/@hkv_resto?_r=1&_t=ZG-9BfbMIiXGlD" target="_blank" class="btn-tiktok" style="justify-content:center;padding:1rem;font-size:1rem;border-radius:12px;">
+                        <i class="fa-brands fa-tiktok"></i>
+                        Ouvrir le profil @hkv_resto
+                    </a>
+
+                    <button id="tiktok-modal-qr-toggle" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#cbd5e1;padding:0.6rem;border-radius:10px;font-size:0.8rem;cursor:pointer;">
+                        <i class="fa-solid fa-qrcode"></i> Afficher le QR Code TikTok
+                    </button>
+
+                    <div id="tiktok-qr-container" style="display:none;text-align:center;background:#05070c;padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08);margin-top:0.5rem;">
+                        <div id="tiktok-qrcode-canvas" style="background:#fff;padding:10px;border-radius:8px;display:inline-block;"></div>
+                        <p style="font-size:0.75rem;color:#94a3b8;margin:0.5rem 0 0;">Scannez pour vous abonner sur TikTok</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. MODAL PLAT / DÉTAIL GASTRONOMIQUE ("et si on clique on verra") -->
+    <div class="hkv-modal" id="modal-dish">
+        <div class="hkv-modal-box">
+            <button class="hkv-modal-close" data-close="modal-dish">&times;</button>
+            <div style="position:relative;height:240px;overflow:hidden;border-radius:24px 24px 0 0;">
+                <img id="dish-modal-img" src="images/plat1.jpg" alt="Plat HKV" style="width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(17,21,34,1) 0%, transparent 60%);"></div>
+                <div style="position:absolute;bottom:1rem;left:1.5rem;right:1.5rem;">
+                    <span style="font-size:0.75rem;background:#ff6b00;color:#fff;padding:0.25rem 0.6rem;border-radius:4px;font-weight:700;text-transform:uppercase;">HKV Resto</span>
+                    <h3 id="dish-modal-title" style="margin:0.4rem 0 0;font-size:1.6rem;font-weight:700;color:#fff;font-family:'Playfair Display',serif;">Poulet Grillé HKV</h3>
+                </div>
+            </div>
+
+            <div style="padding:1.5rem;">
+                <p id="dish-modal-desc" style="font-size:0.95rem;color:#cbd5e1;line-height:1.6;margin-bottom:1.5rem;">
+                    Description du plat préparé avec passion par nos chefs.
+                </p>
+
+                <div style="display:flex;gap:0.75rem;">
+                    <a id="dish-modal-order-btn" href="#" target="_blank" class="btn btn-whatsapp" style="flex:1;justify-content:center;padding:0.95rem;border-radius:12px;font-size:0.95rem;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Commander ce plat via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
