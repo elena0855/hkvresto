@@ -11,17 +11,15 @@ Site web officiel gastronomique et moderne pour **HKV Resto**, basé sur l'inter
 
 1. **Accueil (Hero)** :
    - Titre gourmet, plat signature panoramique réduit en rectangle horizontal, boutons d'accès rapide vers **WhatsApp**, **TikTok** et **Nos Créations**.
-2. **Fonctionnalités** :
-   - Prix accessibles, fait avec passion, commande WhatsApp directe, communauté TikTok active.
-3. **Espaces Officiels (TikTok & WhatsApp)** :
+2. **Espaces Officiels (TikTok & WhatsApp)** :
    - Cartes immersives interactives avec aperçus vidéos, simulateur de message en direct et générateurs de QR codes.
-4. **Nos Créations (Galerie)** :
+3. **Nos Créations (Galerie)** :
    - Images présentées en **vignettes rectangulaires horizontales** avec icône œil d'aperçu rapide (style présentation). Au clic, ouverture de la fiche détaillée avec commande en 1 clic sur WhatsApp.
-5. **Ambiance** :
+4. **Ambiance** :
    - Salle principale, soirées, terrasse et privatisation.
-6. **Avis Clients** :
+5. **Avis Clients** :
    - Retours d'expérience et notes vérifiées.
-7. **Contact & Horaires** :
+6. **Contact & Horaires** :
    - Coordonnées directes, WhatsApp, TikTok, adresse à Cotonou et horaires 7j/7 (11h00 - 02h00).
 
 ---

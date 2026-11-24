@@ -202,7 +202,6 @@
     const waTriggers = [
         'btn-header-order',
         'btn-hero-whatsapp',
-        'card-feature-wa',
         'btn-open-wa-modal',
         'btn-cta-commander',
         'btn-privatiser-open',
@@ -217,6 +216,12 @@
             });
         }
     });
+    const hkvWaCard = document.getElementById('hkv-wa-card');
+    if (hkvWaCard) {
+        hkvWaCard.addEventListener('click', (e) => {
+            if (!e.target.closest('a')) openModal(modalWhatsapp);
+        });
+    }
 
     /* ===== TIKTOK MODAL LOGIC ===== */
     const tiktokQrToggle = document.getElementById('tiktok-modal-qr-toggle');
@@ -248,7 +253,6 @@
     const tiktokTriggers = [
         'btn-header-tiktok',
         'btn-hero-tiktok',
-        'card-feature-tiktok',
         'btn-open-tiktok-modal',
         'btn-cta-tiktok',
         'contact-tiktok-item'
@@ -262,6 +266,12 @@
             });
         }
     });
+    const hkvTiktokCard = document.getElementById('hkv-tiktok-card');
+    if (hkvTiktokCard) {
+        hkvTiktokCard.addEventListener('click', (e) => {
+            if (!e.target.closest('a')) openModal(modalTiktok);
+        });
+    }
 
     /* ===== DISH DETAIL MODAL (CLIC SUR PLAT OU GALERIE) ===== */
     const dishImg = document.getElementById('dish-modal-img');
