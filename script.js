@@ -296,12 +296,12 @@
     const heroCardTrigger = document.getElementById('hero-card-trigger');
     if (heroImgTrigger) {
         heroImgTrigger.addEventListener('click', () => {
-            openDishModal('Poulet Grillé HKV', 'images/plat1.jpg', 'Le plat signature incontournable de HKV Resto : poulet entier mariné aux épices du terroir, grillé au feu de bois, servi avec frites dorées et sauce spéciale.');
+            openDishModal('Frites & Grillades HKV', 'images/plat1.jpg', 'Barquette généreuse de frites dorées accompagnées de grillades croustillantes et ses sauces pimentées maison.');
         });
     }
     if (heroCardTrigger) {
         heroCardTrigger.addEventListener('click', () => {
-            openDishModal('Poulet Grillé HKV', 'images/plat1.jpg', 'Le plat signature incontournable de HKV Resto : poulet entier mariné aux épices du terroir, grillé au feu de bois, servi avec frites dorées et sauce spéciale.');
+            openDishModal('Frites & Grillades HKV', 'images/plat1.jpg', 'Barquette généreuse de frites dorées accompagnées de grillades croustillantes et ses sauces pimentées maison.');
         });
     }
 

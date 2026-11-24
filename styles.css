@@ -573,11 +573,11 @@ img { max-width: 100%; }
     box-shadow: 0 6px 20px rgba(37,211,102,0.35);
 }
 
-/* ===== GALERIE - CARTES RECTANGLES COMPACTES ===== */
+/* ===== GALERIE - GRILLE 3 COLONNES x 4 LIGNES EN RECTANGLES ===== */
 .galerie-section { background: var(--color-bg-surface); }
 .galerie-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
 }
 .galerie-item, .galerie-item.large, .galerie-item.large-v {
@@ -587,7 +587,8 @@ img { max-width: 100%; }
     border-radius: 14px;
     overflow: hidden;
     cursor: pointer;
-    height: 155px;
+    width: 100%;
+    height: auto;
     aspect-ratio: 16 / 10;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: #111522;
@@ -944,14 +945,28 @@ img { max-width: 100%; }
     .hero-actions { flex-direction: column; }
     .hero-actions .btn { width: 100%; justify-content: center; }
     .galerie-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.85rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.65rem;
     }
     .galerie-item, .galerie-item.large, .galerie-item.large-v {
-        height: 135px;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        border-radius: 10px;
         grid-column: auto !important;
         grid-row: auto !important;
     }
+    .galerie-preview-badge {
+        width: 24px;
+        height: 24px;
+        top: 6px;
+        right: 6px;
+        font-size: 0.65rem;
+    }
+    .galerie-overlay {
+        padding: 0.5rem 0.5rem 0.4rem;
+    }
+    .galerie-overlay span { font-size: 0.72rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .galerie-overlay small { font-size: 0.62rem; }
     .menu-card-visual { height: 135px; }
     .whatsapp-cta-card { flex-direction: column; align-items: flex-start; padding: 2rem; }
     .wa-cta-actions { width: 100%; }
@@ -965,8 +980,10 @@ img { max-width: 100%; }
     .hero-title { font-size: 2.2rem; }
     .features-grid { grid-template-columns: 1fr; }
     .testimonials-grid { grid-template-columns: 1fr; }
-    .galerie-grid { grid-template-columns: 1fr; }
-    .galerie-item, .galerie-item.large, .galerie-item.large-v { height: 150px; }
+    .galerie-grid { grid-template-columns: repeat(3, 1fr); gap: 0.45rem; }
+    .galerie-item, .galerie-item.large, .galerie-item.large-v { height: auto; aspect-ratio: 16 / 10; border-radius: 8px; }
+    .galerie-overlay small { display: none; }
+    .galerie-overlay span { font-size: 0.65rem; }
 }
 
 /* ========================================================

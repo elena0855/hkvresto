@@ -14,7 +14,7 @@ Site web officiel gastronomique et moderne pour **HKV Resto**, basé sur l'inter
 2. **Espaces Officiels (TikTok & WhatsApp)** :
    - Cartes immersives interactives avec aperçus vidéos, simulateur de message en direct et générateurs de QR codes.
 3. **Nos Créations (Galerie)** :
-   - Images présentées en **vignettes rectangulaires horizontales** avec icône œil d'aperçu rapide (style présentation). Au clic, ouverture de la fiche détaillée avec commande en 1 clic sur WhatsApp.
+   - Les 10 photos (`plat1.jpg` à `plat10.jpg`) rassemblées en **grille de 3 colonnes sur 4 lignes** en vignettes rectangulaires horizontales avec icône œil d'aperçu rapide. Au clic, ouverture de la fiche détaillée avec commande en 1 clic sur WhatsApp.
 4. **Ambiance** :
    - Salle principale, soirées, terrasse et privatisation.
 5. **Avis Clients** :
