@@ -1,5 +1,5 @@
 // Service Worker pour HKV Resto Vitrine PWA
-const CACHE_NAME = 'hkv-vitrine-v4';
+const CACHE_NAME = 'hkv-vitrine-orig-v6';
 const ASSETS = [
     './index.html',
     './styles.css',

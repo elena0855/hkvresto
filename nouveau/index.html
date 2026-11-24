@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>HKV Resto — Bar &amp; Restaurant Moderne | Cotonou, Bénin</title>
+    <meta name="description" content="HKV Resto, votre bar &amp; restaurant gastronomique à Cotonou. Cocktails exquis, gastronomie moderne, ambiance unique. Commandez via WhatsApp (+229 01 67 01 64 14) et suivez nos vidéos sur TikTok (@hkv_resto).">
+    <meta property="og:title" content="HKV Resto — Bar &amp; Restaurant Moderne | Cotonou">
+    <meta property="og:description" content="Cocktails exquis &amp; gastronomie moderne à Cotonou, Bénin. Commandez via WhatsApp et suivez-nous sur TikTok.">
+    <meta name="theme-color" content="#ff6b00">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <!-- ======= HEADER ======= -->
+    <header class="main-header" id="main-header">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="15" stroke="#ff6b00" stroke-width="2"/>
+                    <path d="M8 20 Q16 10 24 20" stroke="#ff6b00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <circle cx="16" cy="13" r="2.5" fill="#ff6b00"/>
+                </svg>
+            </div>
+            <span class="logo-text"><span class="logo-accent">HKV</span> Resto</span>
+        </div>
+        <nav class="main-nav" id="main-nav">
+            <a href="#galerie" class="nav-link active">Nos Créations</a>
+            <a href="#accueil" class="nav-link">Accueil</a>
+            <a href="#reseaux" class="nav-link">TikTok &amp; WhatsApp</a>
+            <a href="#ambiance" class="nav-link">Ambiance</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <!-- TikTok Header Button -->
+            <button class="btn-tiktok" id="btn-header-tiktok" title="Voir notre compte TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>TikTok</span>
+            </button>
+            <!-- WhatsApp Header Button -->
+            <button class="btn btn-whatsapp" id="btn-header-order" title="Commander sur WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                <span>Commander</span>
+            </button>
+            <button class="burger" id="burger-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+
+    <!-- ======= GALERIE (NOS CRÉATIONS) EN HAUT DU SITE ======= -->
+    <section id="galerie" class="galerie-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Nos Créations</span>
+                <h2 class="section-title">Nos Spécialités</h2>
+                <p class="section-subtitle">Nos plats en images — Cliquez sur un plat pour l'agrandir et commander sur WhatsApp</p>
+            </div>
+            <div class="galerie-grid">
+                <div class="galerie-item" data-title="Frites &amp; Grillades HKV" data-img="../images/plat1.jpg" data-desc="Barquette généreuse de frites dorées accompagnées de grillades croustillantes et ses sauces pimentées maison.">
+                    <div class="galerie-visual">
+                        <img src="../images/plat1.jpg" alt="Frites et grillades HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Frites &amp; Grillades HKV</span><small>Spécialité maison</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-title="Dèguè Frais Maison" data-img="../images/plat2.jpg" data-desc="Dèguè onctueux préparé maison, servi bien glacé pour un pur moment de douceur et de fraîcheur.">
+                    <div class="galerie-visual">
+                        <img src="../images/plat2.jpg" alt="Dèguè frais HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Dèguè Frais Maison</span><small>Douceur glacée</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-title="Frites, Aloko &amp; Aileron" data-img="../images/plat3.jpg" data-desc="Assiette gourmande composée de frites croustillantes, bananes plantains frites (aloko), aileron doré, piment vert et oignons.">
+                    <div class="galerie-visual">
+                        <img src="../images/plat3.jpg" alt="Frites Aloko Aileron HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Frites, Aloko &amp; Aileron</span><small>Assiette gourmande</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-title="Piron &amp; Viande Grillée" data-img="../images/plat4.jpg" data-desc="Piron savoureux accompagné de morceaux de viande grillée tendre, sauce piment vert et oignons émincés.">
+                    <div class="galerie-visual">
+                        <img src="../images/plat4.jpg" alt="Piron et viande grillée HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Piron &amp; Viande Grillée</span><small>Saveur authentique</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-title="Barquette Frites &amp; Aileron" data-img="../images/plat5.jpg" data-desc="Frites chaudes et croustillantes servies avec un bel aileron rôti et ses condiments maison.">
+                    <div class="galerie-visual">
+                        <img src="../images/plat5.jpg" alt="Barquette frites aileron HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Barquette Frites &amp; Aileron</span><small>Fait maison</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-title="Formule Aloko, Aileron &amp; Dèguè" data-img="../images/plat6.jpg" data-desc="L'alliance parfaite entre salé et douceur : frites, aloko, aileron grillé accompagnés d'un bol de dèguè frais.">
+                    <div class="galerie-visual">
+                        <img src="../images/plat6.jpg" alt="Formule Aloko Aileron Dèguè HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Aloko, Aileron &amp; Dèguè</span><small>Formule complète</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-title="Formule Frites, Aloko &amp; Boisson" data-img="../images/plat7.jpg" data-desc="Assiette complète frites, aloko et aileron grillé servie avec une boisson bien fraîche.">
+                    <div class="galerie-visual">
+                        <img src="../images/plat7.jpg" alt="Formule Frites Aloko Boisson HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Frites, Aloko &amp; Boisson</span><small>Menu fraîcheur</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-title="Formule Piron &amp; Boisson" data-img="../images/plat8.jpg" data-desc="Piron maison accompagné d'aileron doré, oignons, piment vert et d'une boisson rafraîchissante.">
+                    <div class="galerie-visual">
+                        <img src="../images/plat8.jpg" alt="Formule Piron Boisson HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Formule Piron &amp; Boisson</span><small>Classique HKV</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-title="Duo Shawarma &amp; Dèguè" data-img="../images/plat9.jpg" data-desc="Shawarma généreusement garni accompagné de notre délicieux dèguè frais maison.">
+                    <div class="galerie-visual">
+                        <img src="../images/plat9.jpg" alt="Shawarma et Dèguè HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Shawarma &amp; Dèguè</span><small>Duo gourmand</small></div>
+                    </div>
+                </div>
+                <div class="galerie-item" data-title="Formule Shawarma &amp; Boisson" data-img="../images/plat10.jpg" data-desc="Shawarma fondant préparé minute avec crudités et sauce maison, servi avec une boisson fraîche.">
+                    <div class="galerie-visual">
+                        <img src="../images/plat10.jpg" alt="Shawarma et Boisson HKV" class="galerie-img">
+                        <div class="galerie-overlay"><span>Shawarma &amp; Boisson</span><small>Pause savoureuse</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= HERO ======= -->
+    <section id="accueil" class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-particles" id="hero-particles"></div>
+            <div class="hero-visual">
+                <div class="hero-img-wrap" id="hero-img-trigger" style="cursor: pointer;" title="Cliquez pour voir le plat signature">
+                    <img src="../images/plat1.jpg" alt="Plat signature HKV Resto" class="hero-food-img">
+                    <div class="hero-img-overlay"></div>
+                </div>
+                <div class="hero-glass-card" id="hero-card-trigger" style="cursor: pointer;">
+                    <div class="glass-icon-svg">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2"><path d="M8 2h8l-1 7H9L8 2z"/><path d="M9 9c0 5 6 5 6 0"/><line x1="12" y1="14" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
+                    </div>
+                    <div>
+                        <strong>Frites &amp; Grillades HKV</strong>
+                        <span>Plat Signature • Fait maison</span>
+                    </div>
+                </div>
+                <div class="hero-glow-orb orb-1"></div>
+                <div class="hero-glow-orb orb-2"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge">
+                <span class="badge-dot"></span>
+                Ouvert — 11h à 2h du matin · Cotonou, Bénin
+            </span>
+            <h1 class="hero-title">
+                Saveurs Authentiques &amp;<br>
+                <em>Gastronomie Moderne</em>
+            </h1>
+            <p class="hero-desc">
+                Bienvenue à <strong>HKV Resto</strong> — une expérience sensorielle unique où chaque plat est préparé avec passion. Commandez directement via <strong>WhatsApp (+229 01 67 01 64 14)</strong> et découvrez nos coulisses en vidéo sur <strong>TikTok (@hkv_resto)</strong> !
+            </p>
+            <div class="hero-actions">
+                <a href="#galerie" class="btn btn-primary" id="btn-hero-creations">
+                    Nos Créations
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <button class="btn btn-whatsapp-outline" id="btn-hero-whatsapp">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    Commander sur WhatsApp
+                </button>
+                <button class="btn-tiktok-outline" id="btn-hero-tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                    Vidéos TikTok HKV
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <strong>150+</strong>
+                    <span>Plats &amp; Cocktails</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="hero-stat">
+                    <strong>7j/7</strong>
+                    <span>Ouvert 11h-02h</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="hero-stat">
+                    <strong>4.9 / 5</strong>
+                    <span>Note clients</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator"><div class="scroll-dot"></div></div>
+    </section>
+
+    <!-- ======= SECTION DÉDIÉE: TIKTOK & WHATSAPP INTERACTIFS ("et si on clique on verra") ======= -->
+    <section id="reseaux" class="social-hub-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Connectez-vous avec HKV Resto</span>
+                <h2 class="section-title">Nos Deux Espaces Officiels</h2>
+                <p class="section-subtitle">Cliquez sur chaque espace ci-dessous pour ouvrir l'aperçu interactif, discuter ou scanner le QR Code</p>
+            </div>
+
+            <div class="social-hub-grid">
+                <!-- TIKTOK CARD -->
+                <div class="social-card card-tiktok" id="hkv-tiktok-card">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+                        <div style="display:flex;align-items:center;gap:1rem;">
+                            <div style="width:54px;height:54px;border-radius:16px;background:#010101;border:2px solid #FE2C55;display:flex;align-items:center;justify-content:center;color:#FE2C55;font-size:1.8rem;box-shadow:0 6px 20px rgba(254,44,85,0.35);">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-size:1.4rem;font-weight:700;color:#fff;margin:0;">TikTok HKV Resto</h3>
+                                <span style="font-size:0.85rem;color:#FE2C55;font-weight:600;">@hkv_resto</span>
+                            </div>
+                        </div>
+                        <span style="font-size:0.75rem;background:rgba(254,44,85,0.15);color:#ff7590;border:1px solid rgba(254,44,85,0.3);padding:0.3rem 0.75rem;border-radius:9999px;font-weight:600;">
+                            Officiel
+                        </span>
+                    </div>
+
+                    <!-- Visual Mock Video Banner -->
+                    <div style="position:relative;border-radius:14px;overflow:hidden;height:160px;margin-bottom:1.25rem;border:1px solid rgba(255,255,255,0.1);background:#05070c;">
+                        <img src="../images/plat1.jpg" alt="Vidéo TikTok HKV" style="width:100%;height:100%;object-fit:cover;opacity:0.65;">
+                        <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.85), transparent);"></div>
+                        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#FE2C55;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 0 20px rgba(254,44,85,0.6);">
+                            <i class="fa-solid fa-play" style="margin-left:3px;"></i>
+                        </div>
+                        <div style="position:absolute;bottom:0.75rem;left:1rem;right:1rem;display:flex;justify-content:space-between;font-size:0.8rem;color:#fff;">
+                            <span>🎬 Ambiance &amp; Grillades en live</span>
+                            <span style="color:#ff6b81;"><i class="fa-solid fa-heart"></i> Voir</span>
+                        </div>
+                    </div>
+
+                    <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;margin-bottom:1.5rem;">
+                        Retrouvez toutes les vidéos virales, les coulisses de la préparation de nos plats, les soirées en direct et nos offres spéciales exclusives.
+                    </p>
+
+                    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                        <button class="btn-tiktok" style="flex:1;justify-content:center;padding:0.85rem;" id="btn-open-tiktok-modal">
+                            <i class="fa-brands fa-tiktok"></i>
+                            <span>Voir le Profil TikTok</span>
+                        </button>
+                        <a href="https://www.tiktok.com/@hkv_resto?_r=1&_t=ZG-9BfbMIiXGlD" target="_blank" class="btn btn-outline" style="padding:0.85rem 1.25rem;border-radius:9999px;font-size:0.85rem;" title="Lien direct TikTok">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WHATSAPP CARD -->
+                <div class="social-card card-wa" id="hkv-wa-card">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+                        <div style="display:flex;align-items:center;gap:1rem;">
+                            <div style="width:54px;height:54px;border-radius:16px;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.8rem;box-shadow:0 6px 20px rgba(37,211,102,0.4);">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-size:1.4rem;font-weight:700;color:#fff;margin:0;">WhatsApp HKV Resto</h3>
+                                <span style="font-size:0.85rem;color:#25D366;font-weight:600;">+229 01 67 01 64 14</span>
+                            </div>
+                        </div>
+                        <span style="font-size:0.75rem;background:rgba(37,211,102,0.15);color:#4ade80;border:1px solid rgba(37,211,102,0.3);padding:0.3rem 0.75rem;border-radius:9999px;font-weight:600;">
+                            7j/7 En Ligne
+                        </span>
+                    </div>
+
+                    <!-- WhatsApp Quick Message Teaser Box -->
+                    <div style="background:#090d16;border:1px solid rgba(37,211,102,0.25);border-radius:14px;padding:1rem;margin-bottom:1.25rem;">
+                        <div style="font-size:0.75rem;color:#94a3b8;margin-bottom:0.4rem;display:flex;align-items:center;gap:0.4rem;">
+                            <span style="width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
+                            HKV Resto Service Clientèle :
+                        </div>
+                        <p style="font-size:0.85rem;color:#f1f5f9;margin:0;font-style:italic;">
+                            "Bonjour ! Envoyez-nous votre commande ou réservez votre table en direct. Livraison rapide partout à Cotonou !"
+                        </p>
+                    </div>
+
+                    <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.6;margin-bottom:1.5rem;">
+                        Passez votre commande en un éclair, personnalisez votre repas ou réservez une table VIP avec nos équipes disponibles 7 jours sur 7.
+                    </p>
+
+                    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                        <button class="btn btn-whatsapp" style="flex:1;justify-content:center;padding:0.85rem;border-radius:9999px;" id="btn-open-wa-modal">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Discuter &amp; Commander</span>
+                        </button>
+                        <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!" target="_blank" class="btn btn-outline" style="padding:0.85rem 1.25rem;border-radius:9999px;font-size:0.85rem;" title="Lien direct WhatsApp">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= AMBIANCE ======= -->
+    <section id="ambiance" class="ambiance-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">L'Expérience</span>
+                <h2 class="section-title">Notre Ambiance</h2>
+                <p class="section-subtitle">Un cadre unique pensé pour votre plaisir — au cœur de Cotonou</p>
+            </div>
+            <div class="ambiance-grid">
+                <div class="ambiance-scene">
+                    <div class="scene-visual">
+                        <div class="scene-lights">
+                            <div class="light l1"></div>
+                            <div class="light l2"></div>
+                            <div class="light l3"></div>
+                        </div>
+                        <div class="scene-table">
+                            <div class="scene-candle-svg">
+                                <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
+                                    <rect x="8" y="10" width="8" height="28" rx="2" fill="rgba(223,168,67,0.3)" stroke="rgba(223,168,67,0.6)" stroke-width="1"/>
+                                    <ellipse cx="12" cy="8" rx="3" ry="5" fill="#dfa843" opacity="0.9"/>
+                                    <ellipse cx="12" cy="6" rx="2" ry="3" fill="#fff5cc" opacity="0.7"/>
+                                </svg>
+                            </div>
+                            <div class="scene-plates">
+                                <div class="plate"></div>
+                                <div class="plate"></div>
+                            </div>
+                        </div>
+                        <div class="scene-label">Salle Principale &amp; Terrasse — Cotonou</div>
+                    </div>
+                </div>
+                <div class="ambiance-infos">
+                    <div class="ambiance-item">
+                        <div class="ambiance-icon-svg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="1.8"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Soirées Inoubliables</h3>
+                            <p>Musique lounge, ambiance festive et cocktails rafraîchissants. Une programmation soigneusement pensée pour vos sorties entre amis ou en famille.</p>
+                        </div>
+                    </div>
+                    <div class="ambiance-item">
+                        <div class="ambiance-icon-svg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </div>
+                        <div>
+                            <h3>Espaces Privatisables</h3>
+                            <p>Un espace VIP pouvant accueillir vos célébrations d'anniversaire, repas d'entreprise ou soirées privées avec service traiteur sur mesure.</p>
+                        </div>
+                    </div>
+                    <div class="ambiance-item">
+                        <div class="ambiance-icon-svg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h3>Terrasse Éclairée</h3>
+                            <p>Profitez de notre terrasse sous la brise de Cotonou. Un cadre chaleureux pour déguster vos grillades en toute décontraction.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="width:fit-content" id="btn-privatiser-open">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Privatiser via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= AVIS ======= -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Ils nous font confiance</span>
+                <h2 class="section-title">Avis Clients</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card card">
+                    <div class="stars-svg"><svg width="90" height="16" viewBox="0 0 90 16"><polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#f59e0b"/><polygon points="26,0 28,6 34,6 29,10 31,16 26,12 21,16 23,10 18,6 24,6" fill="#f59e0b"/><polygon points="44,0 46,6 52,6 47,10 49,16 44,12 39,16 41,10 36,6 42,6" fill="#f59e0b"/><polygon points="62,0 64,6 70,6 65,10 67,16 62,12 57,16 59,10 54,6 60,6" fill="#f59e0b"/><polygon points="80,0 82,6 88,6 83,10 85,16 80,12 75,16 77,10 72,6 78,6" fill="#f59e0b"/></svg></div>
+                    <p>"Une expérience gastronomique exceptionnelle à Cotonou. Le poulet grillé est parfaitement assaisonné et le service ultra rapide sur WhatsApp !"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#ff6b00,#d95b00)">K</div>
+                        <div><strong>Kofi A.</strong><small>Client fidèle</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card card featured-testimonial">
+                    <div class="stars-svg"><svg width="90" height="16" viewBox="0 0 90 16"><polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#f59e0b"/><polygon points="26,0 28,6 34,6 29,10 31,16 26,12 21,16 23,10 18,6 24,6" fill="#f59e0b"/><polygon points="44,0 46,6 52,6 47,10 49,16 44,12 39,16 41,10 36,6 42,6" fill="#f59e0b"/><polygon points="62,0 64,6 70,6 65,10 67,16 62,12 57,16 59,10 54,6 60,6" fill="#f59e0b"/><polygon points="80,0 82,6 88,6 83,10 85,16 80,12 75,16 77,10 72,6 78,6" fill="#f59e0b"/></svg></div>
+                    <p>"J'ai découvert HKV Resto sur TikTok et la réalité est encore meilleure que les vidéos ! On commande en 30 secondes via WhatsApp et c'est livré chaud."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#10b981,#059669)">A</div>
+                        <div><strong>Aminata D.</strong><small>Abonnée TikTok &amp; Cliente</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card card">
+                    <div class="stars-svg"><svg width="90" height="16" viewBox="0 0 90 16"><polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#f59e0b"/><polygon points="26,0 28,6 34,6 29,10 31,16 26,12 21,16 23,10 18,6 24,6" fill="#f59e0b"/><polygon points="44,0 46,6 52,6 47,10 49,16 44,12 39,16 41,10 36,6 42,6" fill="#f59e0b"/><polygon points="62,0 64,6 70,6 65,10 67,16 62,12 57,16 59,10 54,6 60,6" fill="#f59e0b"/><polygon points="80,0 82,6 88,6 83,10 85,16 80,12 75,16 77,10 72,6 78,6" fill="#f59e0b"/></svg></div>
+                    <p>"L'ambiance est au top, les cocktails sont délicieux et le personnel très attentionné. Notre restaurant numéro un à Cotonou !"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#6366f1,#4338ca)">S</div>
+                        <div><strong>Serge M.</strong><small>Événement privé</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= WHATSAPP & TIKTOK DUAL CTA ======= -->
+    <section class="whatsapp-cta-section">
+        <div class="container">
+            <div class="whatsapp-cta-card">
+                <div class="wa-cta-icon">
+                    <svg width="56" height="56" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                </div>
+                <div class="wa-cta-text">
+                    <h2>Commandez ou Suivez-nous</h2>
+                    <p>Contactez notre service sur WhatsApp au <strong>+229 01 67 01 64 14</strong> ou découvrez nos vidéos sur TikTok <strong>@hkv_resto</strong>. Simple, direct et chaleureux.</p>
+                </div>
+                <div class="wa-cta-actions">
+                    <button class="btn-whatsapp-lg" id="btn-cta-commander">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Commander sur WhatsApp
+                    </button>
+                    <button class="btn-tiktok" style="padding:1rem 1.8rem;font-size:1rem;" id="btn-cta-tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                        Découvrir sur TikTok
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= CONTACT ======= -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Nous Trouver</span>
+                <h2 class="section-title">Contact &amp; Adresse</h2>
+                <p class="section-subtitle">Nous sommes là pour vous — Cotonou, Bénin</p>
+            </div>
+            <div class="contact-grid" style="display:flex; justify-content:center;">
+                <div class="contact-infos" style="max-width: 650px; width: 100%;">
+                    <div class="contact-card card" style="padding: 2.5rem 2rem;">
+                        <div class="contact-item">
+                            <div class="contact-icon" style="color:#ff6b00"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                            <div><strong>Adresse</strong><p>Cotonou, Bénin</p></div>
+                        </div>
+                        <div class="contact-item" style="cursor:pointer;" id="contact-wa-item">
+                            <div class="contact-icon" style="color:#25d366"><i class="fa-brands fa-whatsapp text-2xl"></i></div>
+                            <div>
+                                <strong>WhatsApp Officiel</strong>
+                                <p style="color:#25d366;font-weight:600;font-size:1.05rem;">+229 01 67 01 64 14</p>
+                            </div>
+                        </div>
+                        <div class="contact-item" style="cursor:pointer;" id="contact-tiktok-item">
+                            <div class="contact-icon" style="color:#FE2C55"><i class="fa-brands fa-tiktok text-2xl"></i></div>
+                            <div>
+                                <strong>TikTok Officiel</strong>
+                                <p style="color:#FE2C55;font-weight:600;font-size:1.05rem;">@hkv_resto</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" style="color:#f59e0b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                            <div><strong>Horaires d'ouverture</strong><p>Lundi — Dimanche<br><strong>11h00 — 02h00</strong></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="15" stroke="#ff6b00" stroke-width="2"/>
+                            <path d="M8 20 Q16 10 24 20" stroke="#ff6b00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <circle cx="16" cy="13" r="2.5" fill="#ff6b00"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text"><span class="logo-accent">HKV</span> Resto</span>
+                </div>
+                <p>Bar &amp; Restaurant Gastronomique<br>Cotonou, Bénin — Ouvert 7j/7</p>
+                <div style="display:flex;gap:0.75rem;margin-top:1rem;">
+                    <a href="https://wa.me/2290167016414" target="_blank" style="color:#25d366;font-size:1.4rem;" title="WhatsApp HKV Resto"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@hkv_resto?_r=1&_t=ZG-9BfbMIiXGlD" target="_blank" style="color:#FE2C55;font-size:1.4rem;" title="TikTok HKV Resto"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h4>Navigation</h4>
+                <a href="#galerie">Nos Créations</a>
+                <a href="#accueil">Accueil</a>
+                <a href="#reseaux">TikTok &amp; WhatsApp</a>
+                <a href="#ambiance">Ambiance</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Nos Coordonnées</h4>
+                <p style="color:#94a3b8;font-size:0.9rem;margin-bottom:0.75rem;">
+                    WhatsApp : <strong>+229 01 67 01 64 14</strong><br>
+                    TikTok : <strong>@hkv_resto</strong>
+                </p>
+                <p class="footer-hours">Ouvert tous les jours<br>11h00 — 02h00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 HKV Resto — Bar &amp; Restaurant · Cotonou, Bénin. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- ======= DUAL FLOATING BUTTONS (WhatsApp & TikTok) ======= -->
+    <div class="floating-social-stack">
+        <!-- Floating TikTok -->
+        <a href="https://www.tiktok.com/@hkv_resto?_r=1&_t=ZG-9BfbMIiXGlD" target="_blank" class="floating-btn tiktok" id="floating-tiktok-btn" aria-label="Voir nos vidéos TikTok">
+            <i class="fa-brands fa-tiktok" style="font-size:1.6rem;"></i>
+            <span class="floating-tooltip">Suivre sur TikTok @hkv_resto</span>
+        </a>
+        <!-- Floating WhatsApp -->
+        <a href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!" target="_blank" class="floating-btn wa" id="floating-wa-btn" aria-label="Commander sur WhatsApp">
+            <i class="fa-brands fa-whatsapp" style="font-size:2rem;"></i>
+            <span class="floating-tooltip">Commander au +229 01 67 01 64 14</span>
+        </a>
+    </div>
+
+    <!-- ========================================================
+         MODALS INTERACTIFS ("et si on clique on verra")
+         ======================================================== -->
+
+    <!-- 1. MODAL WHATSAPP INTERACTIF -->
+    <div class="hkv-modal" id="modal-whatsapp">
+        <div class="hkv-modal-box">
+            <button class="hkv-modal-close" data-close="modal-whatsapp">&times;</button>
+            <div style="background:linear-gradient(135deg, #128c7e, #075e54);padding:2rem 1.5rem;color:#fff;border-radius:24px 24px 0 0;">
+                <div style="display:flex;align-items:center;gap:1rem;">
+                    <div style="width:52px;height:52px;border-radius:50%;background:#fff;color:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.8rem;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h3 style="margin:0;font-size:1.4rem;font-weight:700;">WhatsApp HKV Resto</h3>
+                        <p style="margin:0.2rem 0 0;font-size:0.85rem;color:#dcf8c6;">+229 01 67 01 64 14 • En ligne 7j/7</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding:1.5rem;">
+                <p style="font-size:0.85rem;color:#94a3b8;margin-bottom:0.75rem;">Choisissez un message rapide ou écrivez le vôtre :</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem;">
+                    <button class="wa-preset-btn" style="background:#1e2538;border:1px solid rgba(255,255,255,0.1);color:#e2e8f0;padding:0.4rem 0.8rem;border-radius:8px;font-size:0.75rem;cursor:pointer;" data-text="Bonjour HKV Resto, je voudrais passer une commande pour livraison !">🍗 Passer une commande</button>
+                    <button class="wa-preset-btn" style="background:#1e2538;border:1px solid rgba(255,255,255,0.1);color:#e2e8f0;padding:0.4rem 0.8rem;border-radius:8px;font-size:0.75rem;cursor:pointer;" data-text="Bonjour HKV Resto, je voudrais réserver une table pour ce soir !">🍽️ Réserver une table</button>
+                    <button class="wa-preset-btn" style="background:#1e2538;border:1px solid rgba(255,255,255,0.1);color:#e2e8f0;padding:0.4rem 0.8rem;border-radius:8px;font-size:0.75rem;cursor:pointer;" data-text="Bonjour HKV Resto, j'aimerais avoir plus d'informations sur vos plats du jour !">📋 Plats disponibles</button>
+                </div>
+
+                <textarea id="wa-modal-textarea" rows="3" style="width:100%;box-sizing:border-box;background:#090d16;border:1px solid rgba(37,211,102,0.4);border-radius:12px;padding:0.85rem;color:#fff;font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;" placeholder="Tapez votre message ici...">Bonjour HKV Resto, je voudrais passer une commande !</textarea>
+
+                <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:0.75rem;">
+                    <a id="wa-modal-send-btn" href="https://wa.me/2290167016414?text=Bonjour%20HKV%20Resto%2C%20je%20voudrais%20passer%20une%20commande%20!" target="_blank" class="btn btn-whatsapp" style="justify-content:center;padding:1rem;font-size:1rem;border-radius:12px;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Envoyer le message sur WhatsApp
+                    </a>
+                    
+                    <button id="wa-modal-qr-toggle" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#cbd5e1;padding:0.6rem;border-radius:10px;font-size:0.8rem;cursor:pointer;">
+                        <i class="fa-solid fa-qrcode"></i> Afficher le QR Code pour scanner
+                    </button>
+
+                    <div id="wa-qr-container" style="display:none;text-align:center;background:#05070c;padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08);margin-top:0.5rem;">
+                        <div id="wa-qrcode-canvas" style="background:#fff;padding:10px;border-radius:8px;display:inline-block;"></div>
+                        <p style="font-size:0.75rem;color:#94a3b8;margin:0.5rem 0 0;">Scannez avec votre téléphone pour ouvrir WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MODAL TIKTOK INTERACTIF -->
+    <div class="hkv-modal" id="modal-tiktok">
+        <div class="hkv-modal-box">
+            <button class="hkv-modal-close" data-close="modal-tiktok">&times;</button>
+            <div style="background:linear-gradient(135deg, #010101, #1e0915);padding:2rem 1.5rem;color:#fff;border-radius:24px 24px 0 0;border-bottom:2px solid #FE2C55;">
+                <div style="display:flex;align-items:center;gap:1rem;">
+                    <div style="width:54px;height:54px;border-radius:50%;background:#000;border:2px solid #FE2C55;color:#FE2C55;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 0 15px rgba(254,44,85,0.4);">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <div>
+                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                            <h3 style="margin:0;font-size:1.4rem;font-weight:700;">HKV Resto</h3>
+                            <i class="fa-solid fa-circle-check" style="color:#25F4EE;font-size:0.9rem;"></i>
+                        </div>
+                        <p style="margin:0.2rem 0 0;font-size:0.85rem;color:#FE2C55;font-weight:600;">@hkv_resto</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding:1.5rem;">
+                <p style="font-size:0.9rem;color:#cbd5e1;line-height:1.5;margin-bottom:1.25rem;">
+                    Suivez nos créations en direct, nos grillades savoureuses, nos recettes de cocktails et toute l'ambiance nocturne de Cotonou !
+                </p>
+
+                <!-- Mockup Video Reels Teaser -->
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.25rem;">
+                    <div style="position:relative;border-radius:12px;overflow:hidden;height:120px;background:#05070c;border:1px solid rgba(255,255,255,0.1);">
+                        <img src="../images/plat1.jpg" alt="Video 1" style="width:100%;height:100%;object-fit:cover;opacity:0.7;">
+                        <span style="position:absolute;bottom:6px;left:6px;font-size:0.7rem;color:#fff;background:rgba(0,0,0,0.6);padding:2px 6px;border-radius:4px;"><i class="fa-solid fa-play"></i> 15.2K</span>
+                    </div>
+                    <div style="position:relative;border-radius:12px;overflow:hidden;height:120px;background:#05070c;border:1px solid rgba(255,255,255,0.1);">
+                        <img src="../images/plat7.jpg" alt="Video 2" style="width:100%;height:100%;object-fit:cover;opacity:0.7;">
+                        <span style="position:absolute;bottom:6px;left:6px;font-size:0.7rem;color:#fff;background:rgba(0,0,0,0.6);padding:2px 6px;border-radius:4px;"><i class="fa-solid fa-play"></i> 28.4K</span>
+                    </div>
+                </div>
+
+                <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                    <a href="https://www.tiktok.com/@hkv_resto?_r=1&_t=ZG-9BfbMIiXGlD" target="_blank" class="btn-tiktok" style="justify-content:center;padding:1rem;font-size:1rem;border-radius:12px;">
+                        <i class="fa-brands fa-tiktok"></i>
+                        Ouvrir le profil @hkv_resto
+                    </a>
+
+                    <button id="tiktok-modal-qr-toggle" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#cbd5e1;padding:0.6rem;border-radius:10px;font-size:0.8rem;cursor:pointer;">
+                        <i class="fa-solid fa-qrcode"></i> Afficher le QR Code TikTok
+                    </button>
+
+                    <div id="tiktok-qr-container" style="display:none;text-align:center;background:#05070c;padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08);margin-top:0.5rem;">
+                        <div id="tiktok-qrcode-canvas" style="background:#fff;padding:10px;border-radius:8px;display:inline-block;"></div>
+                        <p style="font-size:0.75rem;color:#94a3b8;margin:0.5rem 0 0;">Scannez pour vous abonner sur TikTok</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. MODAL PLAT / DÉTAIL GASTRONOMIQUE ("et si on clique on verra") -->
+    <div class="hkv-modal" id="modal-dish">
+        <div class="hkv-modal-box">
+            <button class="hkv-modal-close" data-close="modal-dish">&times;</button>
+            <div style="position:relative;height:240px;overflow:hidden;border-radius:24px 24px 0 0;">
+                <img id="dish-modal-img" src="../images/plat1.jpg" alt="Plat HKV" style="width:100%;height:100%;object-fit:cover;">
+                <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(17,21,34,1) 0%, transparent 60%);"></div>
+                <div style="position:absolute;bottom:1rem;left:1.5rem;right:1.5rem;">
+                    <span style="font-size:0.75rem;background:#ff6b00;color:#fff;padding:0.25rem 0.6rem;border-radius:4px;font-weight:700;text-transform:uppercase;">HKV Resto</span>
+                    <h3 id="dish-modal-title" style="margin:0.4rem 0 0;font-size:1.6rem;font-weight:700;color:#fff;font-family:'Playfair Display',serif;">Poulet Grillé HKV</h3>
+                </div>
+            </div>
+
+            <div style="padding:1.5rem;">
+                <p id="dish-modal-desc" style="font-size:0.95rem;color:#cbd5e1;line-height:1.6;margin-bottom:1.5rem;">
+                    Description du plat préparé avec passion par nos chefs.
+                </p>
+
+                <div style="display:flex;gap:0.75rem;">
+                    <a id="dish-modal-order-btn" href="#" target="_blank" class="btn btn-whatsapp" style="flex:1;justify-content:center;padding:0.95rem;border-radius:12px;font-size:0.95rem;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Commander ce plat via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
